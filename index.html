@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美容サロン集客支援｜goo-dy.</title>
+<meta name="description" content="ホットペッパービューティー運用、MEO対策、Google口コミ活用で美容サロンの新規集客を支援。専門家3名体制で伴走します。">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;
+  color:#1d1d1f;
+  background:#fff;
+  line-height:1.8;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+:root{
+  --orange:#f08300;
+  --navy:#14233a;
+  --green:#00a99d;
+  --light:#fff7ee;
+  --gray:#f6f6f6;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+.header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:100;
+  border-bottom:1px solid #eee;
+}
+.header-inner{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:#3b2414;
+}
+.logo span{color:var(--green)}
+.nav{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  font-weight:700;
+  font-size:14px;
+}
+.nav-cta{
+  background:var(--orange);
+  color:#fff;
+  padding:10px 20px;
+  border-radius:999px;
+}
+
+.hero{
+  background:linear-gradient(135deg,#fff7ee 0%,#fff 55%,#eefaf8 100%);
+  padding:90px 0 80px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:48px;
+  align-items:center;
+}
+.badge{
+  display:inline-block;
+  background:#fff;
+  border:1px solid #f2c188;
+  color:var(--orange);
+  padding:8px 16px;
+  border-radius:999px;
+  font-weight:700;
+  margin-bottom:22px;
+}
+.hero h1{
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.35;
+  margin:0 0 24px;
+  letter-spacing:.03em;
+}
+.hero h1 strong{color:var(--orange)}
+.hero p{
+  font-size:18px;
+  margin-bottom:32px;
+  color:#444;
+}
+.hero-points{
+  display:grid;
+  gap:10px;
+  margin-bottom:34px;
+  font-weight:700;
+}
+.hero-points div::before{
+  content:"✓";
+  color:var(--green);
+  margin-right:8px;
+}
+.cta-row{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 28px;
+  border-radius:10px;
+  font-weight:800;
+  transition:.2s;
+}
+.btn-primary{
+  background:var(--orange);
+  color:#fff;
+}
+.btn-secondary{
+  background:#fff;
+  color:var(--orange);
+  border:2px solid var(--orange);
+}
+.hero-card{
+  background:#fff;
+  border-radius:24px;
+  padding:34px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+.hero-card h3{
+  margin:0 0 20px;
+  color:var(--navy);
+}
+.result-box{
+  background:var(--navy);
+  color:#fff;
+  border-radius:18px;
+  padding:28px;
+  text-align:center;
+}
+.result-box .num{
+  font-size:54px;
+  font-weight:900;
+  color:#ffcf7a;
+  line-height:1;
+}
+.result-box p{
+  color:#fff;
+  margin:12px 0 0;
+}
+
+.section{
+  padding:90px 0;
+}
+.section-gray{
+  background:#f8f8f8;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:54px;
+}
+.section-title span{
+  color:var(--orange);
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.section-title h2{
+  font-size:clamp(28px,4vw,44px);
+  margin:10px 0 14px;
+}
+.section-title p{
+  color:#666;
+}
+
+.problem-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.problem-card{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  border:1px solid #eee;
+  font-weight:800;
+  box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+.problem-card::before{
+  content:"!";
+  display:inline-flex;
+  width:34px;
+  height:34px;
+  align-items:center;
+  justify-content:center;
+  background:#ffe4c2;
+  color:var(--orange);
+  border-radius:50%;
+  margin-right:8px;
+}
+
+.solution-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+.solution-card{
+  background:#fff;
+  padding:34px;
+  border-radius:22px;
+  border-top:6px solid var(--orange);
+  box-shadow:0 18px 40px rgba(0,0,0,.06);
+}
+.solution-card h3{
+  font-size:22px;
+  margin:0 0 14px;
+  color:var(--navy);
+}
+.solution-card p{
+  color:#555;
+}
+
+.authority{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+}
+.authority-box{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:22px;
+  padding:36px;
+}
+.authority-box h3{
+  color:var(--navy);
+  font-size:24px;
+  margin-top:0;
+}
+.media-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.media-list span{
+  background:#f3f3f3;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:14px;
+}
+
+.results{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+}
+.result-card{
+  background:#fff;
+  border-radius:22px;
+  padding:34px;
+  box-shadow:0 16px 40px rgba(0,0,0,.06);
+}
+.result-card h3{
+  margin-top:0;
+  color:var(--navy);
+}
+.kpi{
+  display:grid;
+  gap:14px;
+}
+.kpi div{
+  background:#fff7ee;
+  padding:14px 18px;
+  border-radius:12px;
+  font-weight:800;
+}
+.kpi strong{
+  color:#e60012;
+  font-size:24px;
+}
+
+.voice{
+  background:#fff;
+  border-radius:24px;
+  padding:42px;
+  box-shadow:0 16px 40px rgba(0,0,0,.06);
+}
+.voice h3{
+  color:var(--navy);
+  font-size:28px;
+}
+.voice strong{
+  color:var(--orange);
+}
+
+.price-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.price-card{
+  background:#fff;
+  border:2px solid #eee;
+  border-radius:24px;
+  padding:32px;
+  position:relative;
+}
+.price-card.featured{
+  border-color:var(--orange);
+  transform:translateY(-10px);
+  box-shadow:0 20px 50px rgba(240,131,0,.18);
+}
+.price-card .label{
+  position:absolute;
+  top:-16px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--orange);
+  color:#fff;
+  padding:6px 18px;
+  border-radius:999px;
+  font-weight:800;
+}
+.price-card h3{
+  font-size:22px;
+  color:var(--navy);
+}
+.price{
+  font-size:36px;
+  font-weight:900;
+  color:var(--orange);
+}
+.price small{
+  font-size:14px;
+  color:#555;
+}
+.price-card ul{
+  padding-left:0;
+  list-style:none;
+}
+.price-card li{
+  border-bottom:1px solid #eee;
+  padding:10px 0;
+}
+.price-card li::before{
+  content:"✓";
+  color:var(--green);
+  margin-right:8px;
+}
+
+.option-box{
+  background:#fff;
+  border-radius:24px;
+  padding:42px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:36px;
+  box-shadow:0 16px 40px rgba(0,0,0,.06);
+}
+.option-price{
+  background:var(--navy);
+  color:#fff;
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+}
+.option-price strong{
+  display:block;
+  font-size:36px;
+  color:#ffcf7a;
+}
+
+.cta{
+  background:linear-gradient(135deg,var(--orange),#ffb347);
+  color:#fff;
+  text-align:center;
+  padding:90px 0;
+}
+.cta h2{
+  font-size:clamp(30px,4vw,46px);
+  margin:0 0 18px;
+}
+.cta p{
+  font-size:18px;
+  margin-bottom:30px;
+}
+.cta .btn{
+  background:#fff;
+  color:var(--orange);
+}
+
+.form{
+  background:#fff;
+  border-radius:24px;
+  padding:42px;
+  max-width:760px;
+  margin:40px auto 0;
+  text-align:left;
+}
+.form label{
+  display:block;
+  font-weight:800;
+  margin:18px 0 8px;
+  color:#333;
+}
+.form input,.form textarea,.form select{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+}
+.form button{
+  width:100%;
+  margin-top:24px;
+  border:none;
+  cursor:pointer;
+}
+
+.footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:34px;
+}
+
+@media(max-width:900px){
+  .nav{display:none}
+  .hero-grid,
+  .authority,
+  .results,
+  .option-box{
+    grid-template-columns:1fr;
+  }
+  .problem-grid,
+  .solution-grid,
+  .price-grid{
+    grid-template-columns:1fr;
+  }
+  .section{padding:70px 0}
+  .price-card.featured{transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">goo<span>-dy.</span></a>
+    <nav class="nav">
+      <a href="#problem">お悩み</a>
+      <a href="#solution">強み</a>
+      <a href="#results">実績</a>
+      <a href="#price">料金</a>
+      <a href="#contact" class="nav-cta">無料相談</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">美容サロン専門 集客支援サービス</div>
+      <h1>
+        ホットペッパーとMEOを活用し、<br>
+        <strong>新規集客を増やす</strong><br>
+        サロン集客支援。
+      </h1>
+      <p>
+        HPB運用・Googleビジネスプロフィール・口コミ返信・集客分析まで、
+        美容サロン集客の専門家が伴走します。
+      </p>
+
+      <div class="hero-points">
+        <div>元リクルート社員 × Webマーケティング専門家が支援</div>
+        <div>専門家3名体制で提案・運用・改善をサポート</div>
+        <div>新規集客数 最大3.3倍の改善実績</div>
+      </div>
+
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">無料相談する</a>
+        <a href="#price" class="btn btn-secondary">料金を見る</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>導入実績</h3>
+      <div class="result-box">
+        <div class="num">3.3倍</div>
+        <p>新規集客数が<br>3名/月 → 10名/月へ改善</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray" id="problem">
+  <div class="container">
+    <div class="section-title">
+      <span>PROBLEM</span>
+      <h2>こんなお悩みありませんか？</h2>
+      <p>美容サロンオーナーが抱えやすい集客課題をまとめました。</p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card">広告費が高い</div>
+      <div class="problem-card">文章を作るのが苦手</div>
+      <div class="problem-card">SNS更新まで手が回らない</div>
+      <div class="problem-card">費用対効果が取れない</div>
+      <div class="problem-card">コロナ以降、集客が不安定</div>
+      <div class="problem-card">誰に相談すればいいかわからない</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="solution">
+  <div class="container">
+    <div class="section-title">
+      <span>SOLUTION</span>
+      <h2>goo-dy.が選ばれる理由</h2>
+      <p>単なるMEO会社ではなく、サロン集客全体を支援します。</p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="solution-card">
+        <h3>専門家3名による提案</h3>
+        <p>
+          美容サロン集客・HPB運用・Webマーケティングの視点から、
+          店舗の特徴を活かした改善提案を行います。
+        </p>
+      </div>
+
+      <div class="solution-card">
+        <h3>定期的なアフターフォロー</h3>
+        <p>
+          売上・閲覧数・集客数を見ながら、次に何を改善すべきかを
+          数字ベースでサポートします。
+        </p>
+      </div>
+
+      <div class="solution-card">
+        <h3>運用代行にも対応</h3>
+        <p>
+          SNSやホットペッパー、Googleビジネスプロフィールなど、
+          面倒なネット操作も代行可能です。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-title">
+      <span>AUTHORITY</span>
+      <h2>信用力と実績</h2>
+      <p>日本を代表する経営者からの支援、メディア掲載実績があります。</p>
+    </div>
+
+    <div class="authority">
+      <div class="authority-box">
+        <h3>日本を代表する経営者が支援</h3>
+        <p>
+          HIS創業者、ユナイテッドアローズ創業者など、
+          日本を代表する経営者が後ろ盾として支援。
+        </p>
+      </div>
+
+      <div class="authority-box">
+        <h3>多数のメディア掲載</h3>
+        <div class="media-list">
+          <span>Google</span>
+          <span>朝日新聞</span>
+          <span>東洋経済</span>
+          <span>PRESIDENT Online</span>
+          <span>徳島新聞</span>
+          <span>ORICON NEWS</span>
+          <span>Rakuten News</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <div class="container">
+    <div class="section-title">
+      <span>RESULTS</span>
+      <h2>取り組み実績</h2>
+      <p>導入後、閲覧数・CVR・新規集客数の改善実績があります。</p>
+    </div>
+
+    <div class="results">
+      <div class="result-card">
+        <h3>エステサロン</h3>
+        <div class="kpi">
+          <div>閲覧数：500PV → 800〜1,000PV <strong>約2倍</strong></div>
+          <div>CVR：35% → 50%超 <strong>約1.5倍</strong></div>
+          <div>新規集客：5人/月 → 10人/月 <strong>約2倍</strong></div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <h3>カイロプラクティック</h3>
+        <div class="kpi">
+          <div>閲覧数：400PV → 800PV <strong>約2倍</strong></div>
+          <div>CVR：30% → 45% <strong>約1.5倍</strong></div>
+          <div>新規集客：3人/月 → 10人/月 <strong>約3.3倍</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="voice">
+      <h3>お客様の声</h3>
+      <p>
+        エステサロン <strong>TIARA 葛西店様</strong>
+      </p>
+      <p>
+        集客にお困りの状態でご相談いただき、
+        サービス導入後わずか1ヶ月で、
+        <strong>過去最高の新規顧客獲得数</strong>へ。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="price">
+  <div class="container">
+    <div class="section-title">
+      <span>PRICE</span>
+      <h2>料金プラン</h2>
+      <p>今だけの特別キャンペーン価格です。</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>ライトプラン</h3>
+        <p>HPB契約初心者応援</p>
+        <div class="price">49,800円<small>/月</small></div>
+        <ul>
+          <li>月1回の提案MTG</li>
+          <li>定期アフターフォロー</li>
+          <li>HPB運用コンサルティング</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured">
+        <div class="label">おすすめ</div>
+        <h3>ベーシックプラン</h3>
+        <p>総合マーケティング支援</p>
+        <div class="price">59,800円<small>/月</small></div>
+        <ul>
+          <li>ライトプランの内容すべて</li>
+          <li>HPB運用代行</li>
+          <li>アカウント作成</li>
+          <li>Googleビジネスプロフィール連携・分析</li>
+          <li>口コミ返信 10回/月</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <h3>プレミアムプラン</h3>
+        <p>美容サロンオーナーの右腕</p>
+        <div class="price">129,800円<small>/月</small></div>
+        <ul>
+          <li>ベーシックプランの内容すべて</li>
+          <li>月2回の提案MTG</li>
+          <li>口コミ返信 無制限</li>
+          <li>美容サロン集客コンサル</li>
+          <li>Webマーケティング集客相談</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-title">
+      <span>OPTION</span>
+      <h2>採用強化支援オプション</h2>
+      <p>集客支援とは切り分けて、採用関連だけを強化できます。</p>
+    </div>
+
+    <div class="option-box">
+      <div>
+        <h3>支援内容</h3>
+        <ul>
+          <li>採用媒体の運用支援</li>
+          <li>採用ペルソナの策定</li>
+          <li>候補者向け採用スクリプト作成</li>
+          <li>求人訴求・募集導線の見直し</li>
+          <li>応募〜面談〜採用までの改善提案</li>
+        </ul>
+      </div>
+      <div class="option-price">
+        <p>初期費用</p>
+        <strong>150,000円</strong>
+        <p>月額</p>
+        <strong>450,000円</strong>
+        <small>税抜</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container">
+    <h2>まずは無料相談から</h2>
+    <p>
+      現在のホットペッパー・Googleマップ・口コミ状況を確認し、<br>
+      改善ポイントをご提案します。
+    </p>
+
+    <form class="form" action="https://formspree.io/f/xxxxxxxx" method="POST">
+      <label>お名前</label>
+      <input type="text" name="name" required>
+
+      <label>店舗名</label>
+      <input type="text" name="shop">
+
+      <label>メールアドレス</label>
+      <input type="email" name="email" required>
+
+      <label>電話番号</label>
+      <input type="tel" name="tel">
+
+      <label>業種</label>
+      <select name="type">
+        <option>美容室</option>
+        <option>エステサロン</option>
+        <option>ネイルサロン</option>
+        <option>まつ毛サロン</option>
+        <option>整体・接骨・鍼灸</option>
+        <option>パーソナルジム</option>
+        <option>その他</option>
+      </select>
+
+      <label>ご相談内容</label>
+      <textarea name="message" rows="5"></textarea>
+
+      <button class="btn btn-primary" type="submit">無料相談を送信する</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>©2026 goo-dy.</p>
+</footer>
+
+</body>
+</html>
