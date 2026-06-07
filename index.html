@@ -462,6 +462,47 @@ img{max-width:100%;display:block}
   .section{padding:70px 0}
   .price-card.featured{transform:none}
 }
+  ```css
+/* FAQ */
+
+.faq-list{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.faq-item{
+  background:#fff;
+  border-radius:16px;
+  margin-bottom:16px;
+  padding:0;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
+}
+
+.faq-item summary{
+  cursor:pointer;
+  padding:22px 26px;
+  font-size:18px;
+  font-weight:700;
+  list-style:none;
+}
+
+.faq-item p,
+.faq-item ul{
+  padding:0 26px 24px;
+  margin:0;
+  color:#555;
+}
+
+.faq-item ul{
+  padding-left:46px;
+}
+
+.faq-item[open] summary{
+  color:#f58220;
+}
+```
+
 </style>
 </head>
 
@@ -729,6 +770,73 @@ img{max-width:100%;display:block}
     </div>
   </div>
 </section>
+```html
+<section class="section section-gray" id="faq">
+  <div class="container">
+    <div class="section-title">
+      <span>FAQ</span>
+      <h2>よくあるご質問</h2>
+      <p>導入前によくいただくご質問にお答えします。</p>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Q. 心配だけど大丈夫なの？</summary>
+        <p>
+          A. ハイ！おかげ様で、これまで「継続率100%」となっております。
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q. 価格はいくらなの？</summary>
+        <p>
+          A. ご安心してください！
+          「頑張っている人を応援したい！」という想いでスタートしたサービスなので、
+          価格はできる限りリーズナブルに抑え、「業界最安値」で対応しています。
+          実際に大手競合会社様からも
+          「この値段でこのサービスを出されたら敵わない」
+          とのお言葉をいただいております。
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q. 他社と何が違うの？</summary>
+        <p>
+          A. 株主には日本を代表する経営者が複数おり、
+          私たちは大切な信用を預かっています。
+          そのため絶対的な信用と安心があります。
+        </p>
+
+        <ul>
+          <li>① しつこい営業・押し売り・勧誘は一切行いません。</li>
+          <li>② 集客コンサルタントは全員が実績・経験豊富（400店舗以上支援実績含む）で、代表自ら面談して採用しています。</li>
+          <li>③ 「三度の飯よりWebが好き」という最強のマーケターも担当します。</li>
+          <li>④ メイン担当・サブ担当のダブル体制でサポートします。</li>
+        </ul>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q. 契約期間はどれくらいなの？</summary>
+        <p>
+          A. サービス内容をきちんとご説明させていただいた上で、
+          12ヵ月更新としております。
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q. どんなお店でもちゃんと集客できるの？</summary>
+        <p>
+          A. ホットペッパービューティーに掲載しているお店であれば、
+          基本的に対応可能です。
+          また、単なる運用代行ではなく、お客様に寄り添ったサポートを提供いたします。
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+```
 
 <section class="cta" id="contact">
   <div class="container">
