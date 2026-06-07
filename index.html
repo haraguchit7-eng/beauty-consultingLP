@@ -501,6 +501,312 @@ img{max-width:100%;display:block}
 .faq-item[open] summary{
   color:#f58220;
 }
+  ```css
+/* =========================
+   FIRST VIEW PREMIUM
+========================= */
+
+.fv{
+  position:relative;
+  overflow:hidden;
+  background:#fff7ef;
+}
+
+.fv-bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(255,248,238,.96) 0%,rgba(255,248,238,.88) 42%,rgba(255,255,255,.18) 63%),
+    radial-gradient(circle at 20% 25%,rgba(255,255,255,.9),transparent 38%);
+  z-index:1;
+}
+
+.fv-inner{
+  position:relative;
+  z-index:2;
+  min-height:760px;
+  display:grid;
+  grid-template-columns:52% 48%;
+  align-items:center;
+}
+
+.fv-copy{
+  padding:80px 0 70px 7vw;
+}
+
+.fv-badge{
+  display:inline-block;
+  position:relative;
+  padding:14px 34px;
+  margin-bottom:34px;
+  border:3px solid #f15a00;
+  border-radius:999px;
+  background:#fff;
+  color:#f15a00;
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:.03em;
+}
+
+.fv-badge::after{
+  content:"";
+  position:absolute;
+  left:34px;
+  bottom:-17px;
+  width:22px;
+  height:22px;
+  background:#fff;
+  border-left:3px solid #f15a00;
+  border-bottom:3px solid #f15a00;
+  transform:rotate(-45deg);
+}
+
+.fv h1{
+  margin:0 0 28px;
+  color:#43210f;
+  font-size:clamp(40px,4.8vw,74px);
+  line-height:1.25;
+  font-weight:900;
+  letter-spacing:.03em;
+}
+
+.fv h1 span{
+  color:#f15a00;
+}
+
+.fv-copy > p{
+  margin:0 0 34px;
+  color:#32180d;
+  font-size:24px;
+  font-weight:700;
+  line-height:1.9;
+}
+
+.fv-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  max-width:760px;
+}
+
+.fv-card{
+  background:rgba(255,255,255,.92);
+  border:1.5px solid #f6b06e;
+  border-radius:14px;
+  padding:20px 12px 18px;
+  text-align:center;
+  box-shadow:0 12px 28px rgba(90,40,10,.08);
+}
+
+.fv-icon{
+  color:#f15a00;
+  font-size:42px;
+  line-height:1;
+  margin-bottom:8px;
+  font-weight:900;
+}
+
+.fv-card strong{
+  display:block;
+  color:#43210f;
+  font-size:18px;
+  font-weight:900;
+}
+
+.fv-card p{
+  margin:4px 0 2px;
+  color:#43210f;
+  font-size:22px;
+  font-weight:900;
+  line-height:1.3;
+}
+
+.fv-card p span{
+  color:#f15a00;
+  font-size:46px;
+  font-weight:900;
+}
+
+.fv-card small{
+  color:#43210f;
+  font-size:13px;
+  font-weight:700;
+}
+
+.fv-photo{
+  position:absolute;
+  z-index:1;
+  right:0;
+  top:0;
+  bottom:0;
+  width:56%;
+}
+
+.fv-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.fv-photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(255,248,238,.98) 0%,rgba(255,248,238,.7) 18%,rgba(255,255,255,0) 42%);
+  z-index:2;
+}
+
+.fv-seal{
+  position:absolute;
+  z-index:3;
+  right:9%;
+  bottom:140px;
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  background:#fff;
+  border:5px solid #f4c476;
+  box-shadow:0 16px 38px rgba(0,0,0,.18);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#43210f;
+}
+
+.fv-seal .crown{
+  color:#d8a43b;
+  font-size:32px;
+  line-height:1;
+}
+
+.fv-seal p{
+  margin:4px 0 0;
+  font-size:22px;
+  font-weight:900;
+}
+
+.fv-seal strong{
+  color:#f15a00;
+  font-size:58px;
+  line-height:1;
+  font-weight:900;
+}
+
+.fv-seal strong span{
+  font-size:26px;
+}
+
+.fv-seal small{
+  font-size:18px;
+  font-weight:900;
+}
+
+.fv-bottom{
+  position:relative;
+  z-index:3;
+  background:linear-gradient(90deg,#f15a00,#ff8700);
+  padding:28px 7vw;
+}
+
+.fv-bottom-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:36px;
+  color:#fff;
+}
+
+.fv-bottom strong{
+  font-size:34px;
+  font-weight:900;
+}
+
+.fv-bottom span{
+  font-size:20px;
+  font-weight:700;
+}
+
+.fv-bottom a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:340px;
+  padding:20px 34px;
+  background:#fff;
+  color:#f15a00;
+  border-radius:12px;
+  font-size:24px;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+
+/* header logo */
+.logo img{
+  width:260px;
+  height:auto;
+  display:block;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+}
+
+/* SP */
+@media(max-width:900px){
+  .fv-inner{
+    display:block;
+    min-height:auto;
+  }
+
+  .fv-copy{
+    padding:48px 22px 32px;
+  }
+
+  .fv-photo{
+    position:relative;
+    width:100%;
+    height:420px;
+  }
+
+  .fv h1{
+    font-size:42px;
+  }
+
+  .fv-copy > p{
+    font-size:18px;
+  }
+
+  .fv-cards{
+    grid-template-columns:1fr;
+  }
+
+  .fv-seal{
+    width:140px;
+    height:140px;
+    right:22px;
+    bottom:24px;
+  }
+
+  .fv-seal strong{
+    font-size:42px;
+  }
+
+  .fv-bottom-inner{
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .fv-bottom a{
+    width:100%;
+    min-width:auto;
+    font-size:20px;
+  }
+}
 ```
 
 </style>
@@ -510,7 +816,9 @@ img{max-width:100%;display:block}
 
 <header class="header">
   <div class="container header-inner">
-    <a href="#" class="logo">goo<span>-dy.</span></a>
+   <a href="#" class="logo">
+  <img src="images/goo-dy.logo_.png" alt="goo-dy.">
+</a>
     <nav class="nav">
       <a href="#problem">お悩み</a>
       <a href="#solution">強み</a>
@@ -521,42 +829,67 @@ img{max-width:100%;display:block}
   </div>
 </header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="badge">美容サロン専門 集客支援サービス</div>
+```html
+<section class="fv">
+  <div class="fv-bg"></div>
+
+  <div class="fv-inner">
+    <div class="fv-copy">
+      <div class="fv-badge">ホットペッパービューティー特化</div>
+
       <h1>
-        ホットペッパーとMEOを活用し、<br>
-        <strong>新規集客を増やす</strong><br>
-        サロン集客支援。
+        集客の悩みをプロが解決！<br>
+        <span>毎月安定した新規集客</span>を実現
       </h1>
+
       <p>
-        HPB運用・Googleビジネスプロフィール・口コミ返信・集客分析まで、
-        美容サロン集客の専門家が伴走します。
+        サロンの魅力を最大限に引き出し、<br>
+        ホットペッパービューティーからの集客を増やします。
       </p>
 
-      <div class="hero-points">
-        <div>元リクルート社員 × Webマーケティング専門家が支援</div>
-        <div>専門家3名体制で提案・運用・改善をサポート</div>
-        <div>新規集客数 最大3.3倍の改善実績</div>
-      </div>
+      <div class="fv-cards">
+        <div class="fv-card">
+          <div class="fv-icon">↗</div>
+          <strong>新規集客数</strong>
+          <p>平均<span>130%</span>UP</p>
+          <small>※当社実績</small>
+        </div>
 
-      <div class="cta-row">
-        <a href="#contact" class="btn btn-primary">無料相談する</a>
-        <a href="#price" class="btn btn-secondary">料金を見る</a>
+        <div class="fv-card">
+          <div class="fv-icon">◷</div>
+          <strong>運用の手間</strong>
+          <p>ほぼ<span>0</span></p>
+          <small>丸投げOK</small>
+        </div>
+
+        <div class="fv-card">
+          <div class="fv-icon">●</div>
+          <strong>実績豊富な</strong>
+          <p><span>プロ</span>が担当</p>
+          <small>400店舗以上の支援実績</small>
+        </div>
       </div>
     </div>
 
-    <div class="hero-card">
-      <h3>導入実績</h3>
-      <div class="result-box">
-        <div class="num">3.3倍</div>
-        <p>新規集客数が<br>3名/月 → 10名/月へ改善</p>
+    <div class="fv-photo">
+      <img src="images/salon-woman.jpg" alt="美容サロンオーナー">
+      <div class="fv-seal">
+        <div class="crown">♛</div>
+        <p>継続率</p>
+        <strong>100<span>%</span></strong>
+        <small>を実現！</small>
       </div>
     </div>
   </div>
-</section>
 
+  <div class="fv-bottom">
+    <div class="fv-bottom-inner">
+      <strong>無料相談受付中！</strong>
+      <span>＼ まずはお気軽にご相談ください ／</span>
+      <a href="#contact">✉ 無料で相談する ›</a>
+    </div>
+  </div>
+</section>
 <section class="section section-gray" id="problem">
   <div class="container">
     <div class="section-title">
