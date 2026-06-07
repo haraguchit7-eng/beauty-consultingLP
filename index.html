@@ -808,7 +808,88 @@ img{max-width:100%;display:block}
   }
 }
 ```
+/* =========================
+   FV LAYOUT FIX
+========================= */
 
+.fv{
+  padding-top:0;
+}
+
+.fv-inner{
+  position:relative;
+  z-index:2;
+  display:grid !important;
+  grid-template-columns:56% 44% !important;
+  align-items:center;
+  min-height:720px;
+}
+
+.fv-copy{
+  position:relative;
+  z-index:3;
+  padding:70px 40px 60px 6vw !important;
+}
+
+.fv-photo{
+  position:relative !important;
+  right:auto !important;
+  top:auto !important;
+  bottom:auto !important;
+  width:100% !important;
+  height:720px !important;
+  z-index:2;
+}
+
+.fv-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+.fv-photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(255,248,238,.95) 0%,
+    rgba(255,248,238,.45) 25%,
+    rgba(255,255,255,0) 55%
+  );
+  z-index:2;
+}
+
+.fv h1{
+  font-size:clamp(42px,4.4vw,66px) !important;
+  line-height:1.25 !important;
+}
+
+.fv-copy > p{
+  max-width:620px;
+}
+
+.fv-cards{
+  max-width:760px;
+}
+
+.fv-seal{
+  right:7% !important;
+  bottom:70px !important;
+}
+
+/* スマホ */
+@media(max-width:900px){
+  .fv-inner{
+    display:block !important;
+    min-height:auto;
+  }
+
+  .fv-photo{
+    height:420px !important;
+  }
+}
 </style>
 </head>
 
