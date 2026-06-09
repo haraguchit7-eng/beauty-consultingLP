@@ -951,6 +951,232 @@ img{max-width:100%;display:block}
     padding-top:8px;
   }
 }
+  /* =========================
+   SMARTPHONE UI FIX
+========================= */
+
+@media(max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    width:100%;
+    padding-left:22px;
+    padding-right:22px;
+  }
+
+  /* ヘッダー */
+  .header{
+    height:78px;
+  }
+
+  .header-inner{
+    height:78px;
+    padding:0 18px;
+    justify-content:center;
+  }
+
+  .logo img{
+    width:170px !important;
+  }
+
+  .nav{
+    display:none !important;
+  }
+
+  /* ファーストビュー */
+  .fv{
+    padding-top:0;
+  }
+
+  .fv-inner{
+    display:block !important;
+    min-height:auto !important;
+  }
+
+  .fv-copy{
+    padding:46px 24px 34px !important;
+  }
+
+  .fv-badge{
+    font-size:18px !important;
+    line-height:1.5;
+    padding:14px 24px;
+    max-width:100%;
+    border-width:3px;
+  }
+
+  .fv h1{
+    font-size:42px !important;
+    line-height:1.28 !important;
+    letter-spacing:.01em;
+    margin-top:32px;
+    margin-bottom:26px;
+  }
+
+  .fv-copy > p{
+    font-size:18px !important;
+    line-height:2;
+    font-weight:800;
+  }
+
+  /* スマホでは写真を下に配置 */
+  .fv-photo{
+    position:relative !important;
+    width:100% !important;
+    height:430px !important;
+    margin-top:10px;
+  }
+
+  .fv-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center top !important;
+  }
+
+  .fv-photo::before{
+    background:linear-gradient(
+      180deg,
+      rgba(255,248,238,.95) 0%,
+      rgba(255,248,238,.35) 35%,
+      rgba(255,255,255,0) 70%
+    ) !important;
+  }
+
+  .fv-seal{
+    width:132px !important;
+    height:132px !important;
+    right:20px !important;
+    bottom:22px !important;
+  }
+
+  .fv-seal p{
+    font-size:16px !important;
+  }
+
+  .fv-seal strong{
+    font-size:40px !important;
+  }
+
+  /* 実績カード */
+  .fv-cards{
+    grid-template-columns:1fr !important;
+    gap:18px;
+    max-width:100%;
+  }
+
+  .fv-card{
+    min-height:auto;
+    padding:26px 18px;
+  }
+
+  .fv-card p span{
+    font-size:56px;
+  }
+
+  /* オレンジCTA帯 */
+  .fv-bottom{
+    padding:26px 22px;
+  }
+
+  .fv-bottom-inner{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    text-align:center;
+  }
+
+  .fv-bottom strong{
+    font-size:26px;
+  }
+
+  .fv-bottom span{
+    font-size:15px;
+  }
+
+  .fv-bottom a{
+    width:100%;
+    min-width:0;
+    font-size:18px;
+    padding:18px 20px;
+  }
+
+  /* セクション全体 */
+  .section{
+    padding:64px 0;
+  }
+
+  .section-title h2{
+    font-size:32px !important;
+    line-height:1.4;
+  }
+
+  .section-title p{
+    font-size:16px;
+  }
+
+  /* 料金カード */
+  .price-grid{
+    grid-template-columns:1fr !important;
+    gap:26px;
+  }
+
+  .price-card{
+    padding:30px 24px !important;
+    border-radius:24px;
+  }
+
+  .price{
+    font-size:42px !important;
+    line-height:1.35;
+    word-break:keep-all;
+  }
+
+  .price small{
+    font-size:18px;
+  }
+
+  /* 採用オプション */
+  .option-box{
+    grid-template-columns:1fr !important;
+    padding:30px 24px !important;
+  }
+
+  .option-price{
+    padding:34px 22px !important;
+  }
+
+  .option-price strong{
+    font-size:44px !important;
+  }
+
+  /* FAQ */
+  .faq-item summary{
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  /* 会社概要 */
+  .company-box{
+    border-radius:18px;
+  }
+
+  .company-box div{
+    grid-template-columns:1fr !important;
+  }
+
+  .company-box dt{
+    padding:16px 20px 6px;
+  }
+
+  .company-box dd{
+    padding:6px 20px 18px;
+    word-break:break-word;
+  }
+}
 </style>
 </head>
 
