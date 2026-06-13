@@ -1591,10 +1591,19 @@ body{
   /* スマホ表示修正 */
 @media (max-width:768px){
 
+  @media(max-width:768px){
+
+  .authority-box{
+    padding:28px 22px !important;
+    overflow:visible !important;
+  }
+
   .authority-box h3{
-    font-size: 28px;
-    line-height: 1.4;
-    white-space: nowrap;
+    font-size:28px !important;
+    line-height:1.5 !important;
+    white-space:normal !important;
+    word-break:keep-all !important;
+    overflow-wrap:break-word !important;
   }
 
 }
