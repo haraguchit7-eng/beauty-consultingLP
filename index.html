@@ -1535,6 +1535,33 @@ body{
   font-weight:700;
   font-size:18px;
 }
+  @media(max-width:768px){
+
+  .sp-nowrap-title{
+    font-size:30px !important;
+    line-height:1.45 !important;
+    word-break:keep-all !important;
+  }
+
+  .kpi div{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    gap:10px !important;
+  }
+
+  .kpi div span{
+    flex:1;
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  .kpi strong{
+    flex-shrink:0;
+    white-space:nowrap !important;
+    font-size:22px !important;
+  }
+}
 </style>
 </head>
 
@@ -1622,7 +1649,7 @@ body{
   <div class="container">
     <div class="section-title">
       <span>PROBLEM</span>
-      <h2>こんなお悩みありませんか？</h2>
+      <h2 class="sp-nowrap-title">こんなお悩みありませんか？</h2>
       <p>美容サロンオーナーが抱えやすい集客課題をまとめました。</p>
     </div>
 
@@ -1718,19 +1745,19 @@ body{
       <div class="result-card">
         <h3>エステサロン</h3>
         <div class="kpi">
-          <div>閲覧数：500PV → 800〜1,000PV <strong>約2倍</strong></div>
-          <div>CVR：35% → 50%超 <strong>約1.5倍</strong></div>
-          <div>新規集客：5人/月 → 10人/月 <strong>約2倍</strong></div>
+         <div><span>閲覧数：500PV → 800〜1,000PV</span><strong>約2倍</strong></div>
+　　　　  <div><span>CVR：35% → 50%超</span><strong>約1.5倍</strong></div>
+　　　　  <div><span>新規集客：5人/月 → 10人/月</span><strong>約2倍</strong></div>
         </div>
       </div>
 
       <div class="result-card">
         <h3>カイロプラクティック</h3>
         <div class="kpi">
-          <div>閲覧数：400PV → 800PV <strong>約2倍</strong></div>
-          <div>CVR：30% → 45% <strong>約1.5倍</strong></div>
-          <div>新規集客：3人/月 → 10人/月 <strong>約3.3倍</strong></div>
-        </div>
+  <div><span>閲覧数：400PV → 800PV</span><strong>約2倍</strong></div>
+  <div><span>CVR：30% → 45%</span><strong>約1.5倍</strong></div>
+  <div><span>新規集客：3人/月 → 10人/月</span><strong>約3.3倍</strong></div>
+</div>
       </div>
     </div>
   </div>
