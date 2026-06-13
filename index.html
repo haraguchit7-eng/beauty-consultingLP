@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>美容サロン集客支援｜goo-dy.</title>
-<meta name="description" content="ホットペッパービューティー運用、MEO対策、Google口コミ活用で美容サロンの新規集客を支援。専門家3名体制で伴走します。">
+<meta name="description" content="ホットペッパービューティー運用、MEO対策、Google口コミ活用で美容サロンの新規集客を支援。">
+<link rel="icon" href="https://goo-dy.com/favicon.ico">
 
 <style>
 *{box-sizing:border-box}
@@ -21,16 +22,9 @@ img{max-width:100%;display:block}
 
 :root{
   --orange:#f58220;
-  --orange-dark:#e46f00;
-
-  --green:#00a99d;
-  --mint:#eefaf8;
-
   --brown:#3b2414;
-  --pink:#ef4b8b;
-
+  --green:#00a99d;
   --navy:#1f2f46;
-
   --light:#fff7ef;
   --gray:#f7f7f7;
 }
@@ -40,6 +34,7 @@ img{max-width:100%;display:block}
   margin:auto;
 }
 
+/* HEADER */
 .header{
   position:sticky;
   top:0;
@@ -53,12 +48,10 @@ img{max-width:100%;display:block}
   align-items:center;
   justify-content:space-between;
 }
-.logo{
-  font-size:28px;
-  font-weight:900;
-  color:var(--brown);
+.logo img{
+  width:150px;
+  height:auto;
 }
-.logo span{color:var(--green)}
 .nav{
   display:flex;
   gap:28px;
@@ -73,105 +66,178 @@ img{max-width:100%;display:block}
   border-radius:999px;
 }
 
-.hero{
+/* FIRST VIEW */
+.fv{
+  position:relative;
+  overflow:hidden;
+  background:#fff7ef;
+}
+.fv-bg{
+  position:absolute;
+  inset:0;
   background:
-  linear-gradient(
-  135deg,
-  #fff7ef 0%,
-  #ffffff 55%,
-  #eefaf8 100%);
+    linear-gradient(90deg,rgba(255,248,238,.96) 0%,rgba(255,248,238,.88) 42%,rgba(255,255,255,.18) 63%),
+    radial-gradient(circle at 20% 25%,rgba(255,255,255,.9),transparent 38%);
+  z-index:1;
 }
-.hero-grid{
+.fv-inner{
+  position:relative;
+  z-index:2;
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:48px;
+  grid-template-columns:56% 44%;
   align-items:center;
+  min-height:720px;
 }
-.badge{
+.fv-copy{
+  padding:70px 40px 60px 6vw;
+  position:relative;
+  z-index:3;
+}
+.fv-badge{
   display:inline-block;
-  :#fff;
-  border:1px solid #f2c188;
-  color:var(--orange);
-  padding:8px 16px;
-  border-radius:999px;
-  font-weight:700;
-  margin-bottom:22px;
-}
-.hero h1{
-  font-size:clamp(34px,5vw,58px);
-  line-height:1.35;
-  margin:0 0 24px;
-  letter-spacing:.03em;
-}
-.hero h1 strong{color:var(--orange)}
-.hero p{
-  font-size:18px;
-  margin-bottom:32px;
-  color:#444;
-}
-.hero-points{
-  display:grid;
-  gap:10px;
+  position:relative;
+  padding:14px 34px;
   margin-bottom:34px;
+  border:3px solid #f15a00;
+  border-radius:999px;
+  background:#fff;
+  color:#f15a00;
+  font-size:24px;
+  font-weight:900;
+}
+.fv h1{
+  margin:0 0 28px;
+  color:#43210f;
+  font-size:clamp(42px,4.4vw,66px);
+  line-height:1.25;
+  font-weight:900;
+}
+.fv h1 span{color:#f15a00}
+.fv-copy > p{
+  margin:0 0 34px;
+  color:#32180d;
+  font-size:24px;
+  font-weight:700;
+  line-height:1.9;
+}
+.fv-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  max-width:760px;
+}
+.fv-card{
+  background:rgba(255,255,255,.92);
+  border:1.5px solid #f6b06e;
+  border-radius:14px;
+  padding:20px 12px 18px;
+  text-align:center;
+  box-shadow:0 12px 28px rgba(90,40,10,.08);
+}
+.fv-icon{
+  color:#f15a00;
+  font-size:42px;
+  font-weight:900;
+}
+.fv-card strong{
+  display:block;
+  color:#43210f;
+  font-size:18px;
+  font-weight:900;
+}
+.fv-card p{
+  margin:4px 0 2px;
+  color:#43210f;
+  font-size:22px;
+  font-weight:900;
+}
+.fv-card p span{
+  color:#f15a00;
+  font-size:46px;
+}
+.fv-card small{
+  color:#43210f;
+  font-size:13px;
   font-weight:700;
 }
-.hero-points div::before{
-  content:"✓";
-  color:var(--green);
-  margin-right:8px;
+.fv-photo{
+  position:relative;
+  width:100%;
+  height:720px;
+  z-index:2;
 }
-.cta-row{
+.fv-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+}
+.fv-photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(255,248,238,.95) 0%,rgba(255,248,238,.45) 25%,rgba(255,255,255,0) 55%);
+  z-index:2;
+}
+.fv-seal{
+  position:absolute;
+  z-index:3;
+  right:7%;
+  bottom:70px;
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  background:#fff;
+  border:5px solid #f4c476;
+  box-shadow:0 16px 38px rgba(0,0,0,.18);
   display:flex;
-  gap:16px;
-  flex-wrap:wrap;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#43210f;
 }
-.btn{
+.fv-seal .crown{color:#d8a43b;font-size:32px}
+.fv-seal p{margin:4px 0 0;font-size:22px;font-weight:900}
+.fv-seal strong{color:#f15a00;font-size:58px;line-height:1}
+.fv-seal strong span{font-size:26px}
+.fv-seal small{font-size:18px;font-weight:900}
+.fv-bottom{
+  position:relative;
+  z-index:3;
+  background:linear-gradient(90deg,#f15a00,#ff8700);
+  padding:28px 7vw;
+}
+.fv-bottom-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:36px;
+  color:#fff;
+}
+.fv-bottom strong{
+  font-size:34px;
+  font-weight:900;
+}
+.fv-bottom span{
+  font-size:20px;
+  font-weight:700;
+}
+.fv-bottom a{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:16px 28px;
-  border-radius:10px;
-  font-weight:800;
-  transition:.2s;
-}
-.btn-primary{
-  :var(--orange);
-  color:#fff;
-}
-.btn-secondary{
-  :#fff;
-  color:var(--orange);
-  border:2px solid var(--orange);
-}
-.hero-card{
-  :#fff;
-  border-radius:24px;
-  padding:34px;
-  box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
-.hero-card h3{
-  margin:0 0 20px;
-  color:var(--navy);
-}
-.result-box{
-  background:
-  linear-gradient(
-  135deg,
-  var(--brown),
-  #5a3218
-  );
-}
-.result-box .num{
-  font-size:54px;
+  min-width:340px;
+  padding:20px 34px;
+  background:#fff;
+  color:#f15a00;
+  border-radius:12px;
+  font-size:24px;
   font-weight:900;
-  color:#ffcc66;
-  line-height:1;
-}
-.result-box p{
-  color:#fff;
-  margin:12px 0 0;
+  box-shadow:0 12px 28px rgba(0,0,0,.12);
 }
 
+/* COMMON */
 .section{
   padding:90px 0;
 }
@@ -191,10 +257,9 @@ img{max-width:100%;display:block}
   font-size:clamp(28px,4vw,44px);
   margin:10px 0 14px;
 }
-.section-title p{
-  color:#666;
-}
+.section-title p{color:#666}
 
+/* PROBLEM */
 .problem-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -221,6 +286,7 @@ img{max-width:100%;display:block}
   margin-right:8px;
 }
 
+/* SOLUTION */
 .solution-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -235,13 +301,12 @@ img{max-width:100%;display:block}
 }
 .solution-card h3{
   font-size:22px;
-  margin:0 0 14px;
   color:var(--navy);
+  margin:0 0 14px;
 }
-.solution-card p{
-  color:#555;
-}
+.solution-card p{color:#555}
 
+/* AUTHORITY */
 .authority{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -258,6 +323,13 @@ img{max-width:100%;display:block}
   font-size:24px;
   margin-top:0;
 }
+.authority-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  text-align:center;
+}
 .media-list{
   display:flex;
   flex-wrap:wrap;
@@ -271,6 +343,7 @@ img{max-width:100%;display:block}
   font-size:14px;
 }
 
+/* RESULTS */
 .results{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -292,15 +365,29 @@ img{max-width:100%;display:block}
 }
 .kpi div{
   background:#fff7ee;
-  padding:14px 18px;
+  padding:22px 18px;
   border-radius:12px;
   font-weight:800;
+  text-align:center;
+}
+.kpi div span{
+  display:block;
+  font-size:18px;
+  line-height:1.55;
+  margin-bottom:8px;
 }
 .kpi strong{
-  color:#e60012;
-  font-size:24px;
+  display:block;
+  width:100%;
+  text-align:center;
+  font-size:34px;
+  line-height:1.1;
+  white-space:nowrap;
+  margin-top:12px;
+  color:#ff0000;
 }
 
+/* VOICE */
 .voice{
   background:#fff;
   border-radius:24px;
@@ -311,1177 +398,13 @@ img{max-width:100%;display:block}
   color:var(--navy);
   font-size:28px;
 }
-.voice strong{
-  color:var(--orange);
-}
+.voice strong{color:var(--orange)}
 
-.price-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-}
-.price-card{
-  background:#fff;
-  border:2px solid #eee;
-  border-radius:24px;
-  padding:32px;
-  position:relative;
-}
-.price-card.featured{
-  border-color:var(--orange);
-  transform:translateY(-10px);
-  box-shadow:0 20px 50px rgba(240,131,0,.18);
-}
-.price-card .label{
-  position:absolute;
-  top:-16px;
-  left:50%;
-  transform:translateX(-50%);
-  background:var(--orange);
-  color:#fff;
-  padding:6px 18px;
-  border-radius:999px;
-  font-weight:800;
-}
-.price-card h3{
-  font-size:22px;
-  color:var(--navy);
-}
-.price{
-  font-size:36px;
-  font-weight:900;
-  color:var(--orange);
-}
-.price small{
-  font-size:14px;
-  color:#555;
-}
-.price-card ul{
-  padding-left:0;
-  list-style:none;
-}
-.price-card li{
-  border-bottom:1px solid #eee;
-  padding:10px 0;
-}
-.price-card li::before{
-  content:"✓";
-  color:var(--green);
-  margin-right:8px;
-}
-
-.option-box{
-  background:#fff;
-  border-radius:24px;
-  padding:42px;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:36px;
-  box-shadow:0 16px 40px rgba(0,0,0,.06);
-}
-.option-price{
-  background:var(--navy);
-  color:#fff;
-  border-radius:20px;
-  padding:30px;
-  text-align:center;
-}
-.option-price strong{
-  display:block;
-  font-size:36px;
-  color:#ffcf7a;
-}
-
-.cta{
-  background:linear-gradient(135deg,var(--orange),#ffb347);
-  color:#fff;
-  text-align:center;
+/* PRICE */
+.pricing{
   padding:90px 0;
 }
-.cta h2{
-  font-size:clamp(30px,4vw,46px);
-  margin:0 0 18px;
-}
-.cta p{
-  font-size:18px;
-  margin-bottom:30px;
-}
-.cta .btn{
-  background:#fff;
-  color:var(--orange);
-}
-
-.form{
-  background:#fff;
-  border-radius:24px;
-  padding:42px;
-  max-width:760px;
-  margin:40px auto 0;
-  text-align:left;
-}
-.form label{
-  display:block;
-  font-weight:800;
-  margin:18px 0 8px;
-  color:#333;
-}
-.form input,.form textarea,.form select{
-  width:100%;
-  padding:14px;
-  border:1px solid #ddd;
-  border-radius:10px;
-  font-size:16px;
-}
-.form button{
-  width:100%;
-  margin-top:24px;
-  border:none;
-  cursor:pointer;
-}
-
-.footer{
-  background:#222;
-  color:#fff;
-  text-align:center;
-  padding:34px;
-}
-
-@media(max-width:900px){
-  .nav{display:none}
-  .hero-grid,
-  .authority,
-  .results,
-  .option-box{
-    grid-template-columns:1fr;
-  }
-  .problem-grid,
-  .solution-grid,
-  .price-grid{
-    grid-template-columns:1fr;
-  }
-  .section{padding:70px 0}
-  .price-card.featured{transform:none}
-}
-  ```css
-/* FAQ */
-
-.faq-list{
-  max-width:900px;
-  margin:0 auto;
-}
-
-.faq-item{
-  background:#fff;
-  border-radius:16px;
-  margin-bottom:16px;
-  padding:0;
-  overflow:hidden;
-  box-shadow:0 8px 24px rgba(0,0,0,.05);
-}
-
-.faq-item summary{
-  cursor:pointer;
-  padding:22px 26px;
-  font-size:18px;
-  font-weight:700;
-  list-style:none;
-}
-
-.faq-item p,
-.faq-item ul{
-  padding:0 26px 24px;
-  margin:0;
-  color:#555;
-}
-
-.faq-item ul{
-  padding-left:46px;
-}
-
-.faq-item[open] summary{
-  color:#f58220;
-}
-  ```css
-/* =========================
-   FIRST VIEW PREMIUM
-========================= */
-
-.fv{
-  position:relative;
-  overflow:hidden;
-  background:#fff7ef;
-}
-
-.fv-bg{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(255,248,238,.96) 0%,rgba(255,248,238,.88) 42%,rgba(255,255,255,.18) 63%),
-    radial-gradient(circle at 20% 25%,rgba(255,255,255,.9),transparent 38%);
-  z-index:1;
-}
-
-.fv-inner{
-  position:relative;
-  z-index:2;
-  min-height:760px;
-  display:grid;
-  grid-template-columns:52% 48%;
-  align-items:center;
-}
-
-.fv-copy{
-  padding:80px 40px 70px 7vw;
-}
-
-.fv-badge{
-  display:inline-block;
-  position:relative;
-  padding:14px 34px;
-  margin-bottom:34px;
-  border:3px solid #f15a00;
-  border-radius:999px;
-  background:#fff;
-  color:#f15a00;
-  font-size:24px;
-  font-weight:900;
-  letter-spacing:.03em;
-}
-
-.fv-badge::after{
-  content:"";
-  position:absolute;
-  left:34px;
-  bottom:-17px;
-  width:22px;
-  height:22px;
-  background:#fff;
-  border-left:3px solid #f15a00;
-  border-bottom:3px solid #f15a00;
-  transform:rotate(-45deg);
-}
-
-.fv h1{
-  margin:0 0 28px;
-  color:#43210f;
-  font-size:clamp(40px,4.8vw,74px);
-  line-height:1.25;
-  font-weight:900;
-  letter-spacing:.03em;
-}
-
-.fv h1 span{
-  color:#f15a00;
-}
-
-.fv-copy > p{
-  margin:0 0 34px;
-  color:#32180d;
-  font-size:24px;
-  font-weight:700;
-  line-height:1.9;
-}
-
-.fv-cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  max-width:760px;
-}
-
-.fv-card{
-  background:rgba(255,255,255,.92);
-  border:1.5px solid #f6b06e;
-  border-radius:14px;
-  padding:20px 12px 18px;
-  text-align:center;
-  box-shadow:0 12px 28px rgba(90,40,10,.08);
-}
-
-.fv-icon{
-  color:#f15a00;
-  font-size:42px;
-  line-height:1;
-  margin-bottom:8px;
-  font-weight:900;
-}
-
-.fv-card strong{
-  display:block;
-  color:#43210f;
-  font-size:18px;
-  font-weight:900;
-}
-
-.fv-card p{
-  margin:4px 0 2px;
-  color:#43210f;
-  font-size:22px;
-  font-weight:900;
-  line-height:1.3;
-}
-
-.fv-card p span{
-  color:#f15a00;
-  font-size:46px;
-  font-weight:900;
-}
-
-.fv-card small{
-  color:#43210f;
-  font-size:13px;
-  font-weight:700;
-}
-
-.fv-photo{
-  position:absolute;
-  z-index:1;
-  right:0;
-  top:0;
-  bottom:0;
-  width:56%;
-}
-
-.fv-photo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:right center;
-}
-
-.fv-photo::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,rgba(255,248,238,.98) 0%,rgba(255,248,238,.7) 18%,rgba(255,255,255,0) 42%);
-  z-index:2;
-}
-
-.fv-seal{
-  position:absolute;
-  z-index:3;
-  right:9%;
-  bottom:140px;
-  width:190px;
-  height:190px;
-  border-radius:50%;
-  background:#fff;
-  border:5px solid #f4c476;
-  box-shadow:0 16px 38px rgba(0,0,0,.18);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#43210f;
-}
-
-.fv-seal .crown{
-  color:#d8a43b;
-  font-size:32px;
-  line-height:1;
-}
-
-.fv-seal p{
-  margin:4px 0 0;
-  font-size:22px;
-  font-weight:900;
-}
-
-.fv-seal strong{
-  color:#f15a00;
-  font-size:58px;
-  line-height:1;
-  font-weight:900;
-}
-
-.fv-seal strong span{
-  font-size:26px;
-}
-
-.fv-seal small{
-  font-size:18px;
-  font-weight:900;
-}
-
-.fv-bottom{
-  position:relative;
-  z-index:3;
-  background:linear-gradient(90deg,#f15a00,#ff8700);
-  padding:28px 7vw;
-}
-
-.fv-bottom-inner{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:36px;
-  color:#fff;
-}
-
-.fv-bottom strong{
-  font-size:34px;
-  font-weight:900;
-}
-
-.fv-bottom span{
-  font-size:20px;
-  font-weight:700;
-}
-
-.fv-bottom a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:340px;
-  padding:20px 34px;
-  background:#fff;
-  color:#f15a00;
-  border-radius:12px;
-  font-size:24px;
-  font-weight:900;
-  text-decoration:none;
-  box-shadow:0 12px 28px rgba(0,0,0,.12);
-}
-
-/* header logo */
-.logo img{
-  width:150px;
-  height:auto;
-  display:block;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-}
-
-/* SP */
-@media(max-width:900px){
-  .fv-inner{
-    display:block;
-    min-height:auto;
-  }
-
-  .fv-copy{
-    padding:48px 22px 32px;
-  }
-
-  .fv-photo{
-    position:relative;
-    width:100%;
-    height:760px;
-  }
-
-  .fv h1{
-    font-size:42px;
-  }
-
-  .fv-copy > p{
-    font-size:18px;
-  }
-
-  .fv-cards{
-    grid-template-columns:1fr;
-  }
-
-  .fv-seal{
-    width:140px;
-    height:140px;
-    right:22px;
-    bottom:24px;
-  }
-
-  .fv-seal strong{
-    font-size:42px;
-  }
-
-  .fv-bottom-inner{
-    flex-direction:column;
-    gap:14px;
-  }
-
-  .fv-bottom a{
-    width:100%;
-    min-width:auto;
-    font-size:20px;
-  }
-}
-```
-/* =========================
-   FV LAYOUT FIX
-========================= */
-
-.fv{
-  padding-top:0;
-}
-
-.fv-inner{
-  position:relative;
-  z-index:2;
-  display:grid !important;
-  grid-template-columns:56% 44% !important;
-  align-items:center;
-  min-height:720px;
-}
-
-.fv-copy{
-  position:relative;
-  z-index:3;
-  padding:70px 40px 60px 6vw !important;
-}
-
-.fv-photo{
-  position:relative !important;
-  right:auto !important;
-  top:auto !important;
-  bottom:auto !important;
-  width:100% !important;
-  height:720px !important;
-  z-index:2;
-}
-
-.fv-photo img{
-  width:100% !important;
-  height:100% !important;
-  object-fit:cover !important;
-  object-position:center center !important;
-}
-
-.fv-photo::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    90deg,
-    rgba(255,248,238,.95) 0%,
-    rgba(255,248,238,.45) 25%,
-    rgba(255,255,255,0) 55%
-  );
-  z-index:2;
-}
-
-.fv h1{
-  font-size:clamp(42px,4.4vw,66px) !important;
-  line-height:1.25 !important;
-}
-
-.fv-copy > p{
-  max-width:620px;
-}
-
-.fv-cards{
-  max-width:760px;
-}
-
-.fv-seal{
-  right:7% !important;
-  bottom:70px !important;
-}
-
-/* スマホ */
-@media(max-width:900px){
-  .fv-inner{
-    display:block !important;
-    min-height:auto;
-  }
-
-  .fv-photo{
-    height:420px !important;
-  }
-}
-  .company{
-  padding:80px 0;
-  background:#fff;
-}
-
-.company-box{
-  max-width:900px;
-  margin:0 auto;
-  background:#fff;
-  border:1px solid #eee;
-  border-radius:20px;
-  box-shadow:0 12px 30px rgba(0,0,0,.05);
-  overflow:hidden;
-}
-
-.company-box dl{
-  margin:0;
-}
-
-.company-box div{
-  display:grid;
-  grid-template-columns:220px 1fr;
-  border-bottom:1px solid #eee;
-}
-
-.company-box div:last-child{
-  border-bottom:none;
-}
-
-.company-box dt{
-  background:#fff7ef;
-  padding:20px 24px;
-  font-weight:800;
-  color:#4b2512;
-}
-
-.company-box dd{
-  margin:0;
-  padding:20px 24px;
-  color:#333;
-}
-
-.company-box a{
-  color:#f58220;
-  font-weight:700;
-  text-decoration:none;
-}
-
-@media(max-width:768px){
-  .company-box div{
-    grid-template-columns:1fr;
-  }
-
-  .company-box dt{
-    padding-bottom:8px;
-  }
-
-  .company-box dd{
-    padding-top:8px;
-  }
-}
-  /* =========================
-   SMARTPHONE UI FIX
-========================= */
-
-@media(max-width:768px){
-
-  body{
-    overflow-x:hidden;
-  }
-
-  .container{
-    width:100%;
-    padding-left:22px;
-    padding-right:22px;
-  }
-
-  /* ヘッダー */
-  .header{
-    height:78px;
-  }
-
-  .header-inner{
-    height:78px;
-    padding:0 18px;
-    justify-content:center;
-  }
-
-  .logo img{
-    width:170px !important;
-  }
-
-  .nav{
-    display:none !important;
-  }
-
-  /* ファーストビュー */
-  .fv{
-    padding-top:0;
-  }
-
-  .fv-inner{
-    display:block !important;
-    min-height:auto !important;
-  }
-
-  .fv-copy{
-    padding:46px 24px 34px !important;
-  }
-
-  .fv-badge{
-    font-size:18px !important;
-    line-height:1.5;
-    padding:14px 24px;
-    max-width:100%;
-    border-width:3px;
-  }
-
-  .fv h1{
-    font-size:42px !important;
-    line-height:1.28 !important;
-    letter-spacing:.01em;
-    margin-top:32px;
-    margin-bottom:26px;
-  }
-
-  .fv-copy > p{
-    font-size:18px !important;
-    line-height:2;
-    font-weight:800;
-  }
-
-  /* スマホでは写真を下に配置 */
-  .fv-photo{
-    position:relative !important;
-    width:100% !important;
-    height:430px !important;
-    margin-top:10px;
-  }
-
-  .fv-photo img{
-    width:100% !important;
-    height:100% !important;
-    object-fit:cover !important;
-    object-position:center top !important;
-  }
-
-  .fv-photo::before{
-    background:linear-gradient(
-      180deg,
-      rgba(255,248,238,.95) 0%,
-      rgba(255,248,238,.35) 35%,
-      rgba(255,255,255,0) 70%
-    ) !important;
-  }
-
-  .fv-seal{
-    width:132px !important;
-    height:132px !important;
-    right:20px !important;
-    bottom:22px !important;
-  }
-
-  .fv-seal p{
-    font-size:16px !important;
-  }
-
-  .fv-seal strong{
-    font-size:40px !important;
-  }
-
-  /* 実績カード */
-  .fv-cards{
-    grid-template-columns:1fr !important;
-    gap:18px;
-    max-width:100%;
-  }
-
-  .fv-card{
-    min-height:auto;
-    padding:26px 18px;
-  }
-
-  .fv-card p span{
-    font-size:56px;
-  }
-
-  /* オレンジCTA帯 */
-  .fv-bottom{
-    padding:26px 22px;
-  }
-
-  .fv-bottom-inner{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    text-align:center;
-  }
-
-  .fv-bottom strong{
-    font-size:26px;
-  }
-
-  .fv-bottom span{
-    font-size:15px;
-  }
-
-  .fv-bottom a{
-    width:100%;
-    min-width:0;
-    font-size:18px;
-    padding:18px 20px;
-  }
-
-  /* セクション全体 */
-  .section{
-    padding:64px 0;
-  }
-
-  .section-title h2{
-    font-size:32px !important;
-    line-height:1.4;
-  }
-
-  .section-title p{
-    font-size:16px;
-  }
-
-  /* 料金カード */
-  .price-grid{
-    grid-template-columns:1fr !important;
-    gap:26px;
-  }
-
-  .price-card{
-    padding:30px 24px !important;
-    border-radius:24px;
-  }
-
-  .price{
-    font-size:42px !important;
-    line-height:1.35;
-    word-break:keep-all;
-  }
-
-  .price small{
-    font-size:18px;
-  }
-
-  /* 採用オプション */
-  .option-box{
-    grid-template-columns:1fr !important;
-    padding:30px 24px !important;
-  }
-
-  .option-price{
-    padding:34px 22px !important;
-  }
-
-  .option-price strong{
-    font-size:44px !important;
-  }
-
-  /* FAQ */
-  .faq-item summary{
-    font-size:17px;
-    line-height:1.6;
-  }
-
-  /* 会社概要 */
-  .company-box{
-    border-radius:18px;
-  }
-
-  .company-box div{
-    grid-template-columns:1fr !important;
-  }
-
-  .company-box dt{
-    padding:16px 20px 6px;
-  }
-
-  .company-box dd{
-    padding:6px 20px 18px;
-    word-break:break-word;
-  }
-}
-  /* =========================
-   MOBILE RIGHT SPACE FIX
-========================= */
-
-html,
-body{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden !important;
-}
-
-@media(max-width:768px){
-
-  *{
-    max-width:100%;
-  }
-
-  .fv,
-  .fv-inner,
-  .fv-copy,
-  .fv-photo,
-  .fv-bottom,
-  .section,
-  .container,
-  .price-card,
-  .option-box,
-  .company-box{
-    width:100% !important;
-    max-width:100% !important;
-    overflow-x:hidden !important;
-  }
-
-  .fv-copy{
-    padding-left:24px !important;
-    padding-right:24px !important;
-  }
-
-  .fv-badge{
-    width:100% !important;
-    max-width:100% !important;
-    text-align:center;
-    white-space:normal !important;
-  }
-
-  .fv h1{
-    width:100% !important;
-    max-width:100% !important;
-    word-break:keep-all;
-  }
-
-  .fv-cards{
-    width:100% !important;
-    max-width:100% !important;
-  }
-
-  .fv-card{
-    width:100% !important;
-  }
-
-  .fv-photo{
-    left:0 !important;
-    right:auto !important;
-  }
-
-  .fv-bottom-inner,
-  .hero-buttons,
-  .cta-row{
-    width:100% !important;
-    max-width:100% !important;
-  }
-
-  .fv-bottom a,
-  .btn,
-  .btn-primary,
-  .btn-secondary{
-    max-width:100% !important;
-  }
-
-  img{
-    max-width:100% !important;
-  }
-}
-  /* =========================
-   FINAL MOBILE FIX
-========================= */
-
-html,
-body{
-  overflow-x:hidden !important;
-  width:100% !important;
-}
-
-@media(max-width:768px){
-
-  body{
-    font-size:16px;
-  }
-
-  .container{
-    width:100% !important;
-    max-width:100% !important;
-    padding-left:20px !important;
-    padding-right:20px !important;
-  }
-
-  /* ヘッダー */
-  .header{
-    position:relative !important;
-    height:auto !important;
-  }
-
-  .header-inner{
-    height:82px !important;
-    justify-content:center !important;
-    padding:0 16px !important;
-  }
-
-  .logo img{
-    width:180px !important;
-    max-width:180px !important;
-  }
-
-  .nav{
-    display:none !important;
-  }
-
-  /* ファーストビュー */
-  .fv{
-    width:100% !important;
-    overflow:hidden !important;
-  }
-
-  .fv-inner{
-    display:block !important;
-    width:100% !important;
-    min-height:auto !important;
-  }
-
-  .fv-copy{
-    width:100% !important;
-    padding:42px 22px 30px !important;
-  }
-
-  .fv-badge{
-    width:100% !important;
-    max-width:100% !important;
-    padding:14px 18px !important;
-    font-size:18px !important;
-    line-height:1.5 !important;
-    text-align:center;
-    white-space:normal !important;
-  }
-
-  .fv h1{
-    width:100% !important;
-    max-width:100% !important;
-    font-size:38px !important;
-    line-height:1.32 !important;
-    letter-spacing:0 !important;
-    word-break:normal !important;
-    overflow-wrap:break-word !important;
-    margin:34px 0 24px !important;
-  }
-
-  .fv-copy > p{
-    width:100% !important;
-    font-size:18px !important;
-    line-height:2 !important;
-    word-break:normal !important;
-  }
-
-  .fv-photo{
-    position:relative !important;
-    width:100% !important;
-    height:430px !important;
-    margin:0 !important;
-  }
-
-  .fv-photo img{
-    width:100% !important;
-    height:100% !important;
-    object-fit:cover !important;
-    object-position:center top !important;
-  }
-
-  .fv-cards{
-    display:grid !important;
-    grid-template-columns:1fr !important;
-    gap:18px !important;
-    width:100% !important;
-  }
-
-  .fv-card{
-    width:100% !important;
-    padding:26px 18px !important;
-  }
-
-  .fv-bottom{
-    width:100% !important;
-    padding:28px 22px !important;
-  }
-
-  .fv-bottom-inner{
-    flex-direction:column !important;
-    gap:14px !important;
-    text-align:center !important;
-  }
-
-  .fv-bottom strong{
-    font-size:28px !important;
-  }
-
-  .fv-bottom span{
-    font-size:16px !important;
-  }
-
-  .fv-bottom a{
-    width:100% !important;
-    min-width:0 !important;
-    font-size:18px !important;
-    padding:18px 16px !important;
-  }
-
-  /* セクション */
-  .section{
-    padding:64px 0 !important;
-  }
-
-  .section-title h2{
-    font-size:30px !important;
-    line-height:1.4 !important;
-  }
-
-  /* 料金 */
-  .price-grid{
-    display:grid !important;
-    grid-template-columns:1fr !important;
-    gap:26px !important;
-  }
-
-  .price-card{
-    width:100% !important;
-    padding:32px 24px !important;
-    border-radius:24px !important;
-    overflow:hidden !important;
-  }
-
-  .price{
-    font-size:38px !important;
-    line-height:1.35 !important;
-    white-space:normal !important;
-    word-break:normal !important;
-    overflow-wrap:break-word !important;
-  }
-
-  .price small{
-    display:inline-block !important;
-    font-size:16px !important;
-  }
-
-  .price-card h3{
-    font-size:28px !important;
-  }
-
-  .price-card li{
-    font-size:17px !important;
-    line-height:1.7 !important;
-  }
-
-  /* オプション料金 */
-  .option-box{
-    display:block !important;
-    width:100% !important;
-    padding:30px 24px !important;
-  }
-
-  .option-price{
-    width:100% !important;
-    padding:32px 20px !important;
-  }
-
-  .option-price strong{
-    font-size:40px !important;
-    line-height:1.3 !important;
-    word-break:break-word !important;
-  }
-
-  /* FAQ */
-  .faq-item summary{
-    font-size:17px !important;
-    line-height:1.6 !important;
-  }
-
-  /* 会社概要 */
-  .company-box div{
-    display:block !important;
-  }
-
-  .company-box dt,
-  .company-box dd{
-    padding-left:18px !important;
-    padding-right:18px !important;
-  }
-}
-  .inquiry-only{
+.inquiry-only{
   max-width:700px;
   margin:0 auto;
   padding:50px;
@@ -1489,8 +412,8 @@ body{
   background:#fff;
   box-shadow:0 20px 40px rgba(0,0,0,.08);
   text-align:center;
+  border:2px solid #eee;
 }
-
 .price-badge{
   display:inline-block;
   background:#ff6b00;
@@ -1501,203 +424,288 @@ body{
   font-weight:700;
   margin-bottom:20px;
 }
-
-.inquiry-only h3{
+.plan-title{
   font-size:36px;
+  line-height:1.4;
   margin-bottom:20px;
+  color:var(--navy);
 }
-
 .price-message{
   font-size:22px;
   line-height:1.8;
   margin-bottom:30px;
   color:#444;
 }
-
 .inquiry-only ul{
   text-align:left;
   max-width:400px;
   margin:0 auto 30px;
+  padding-left:0;
+  list-style:none;
 }
-
 .inquiry-only li{
   margin-bottom:12px;
   font-size:18px;
 }
-
-.btn-primary{
+.btn-primary,
+.cta-btn{
   display:inline-block;
   background:#ff6b00;
   color:#fff;
   padding:18px 40px;
   border-radius:999px;
-  text-decoration:none;
   font-weight:700;
   font-size:18px;
 }
-  @media(max-width:768px){
 
-  .sp-nowrap-title{
-    font-size:30px !important;
-    line-height:1.45 !important;
-    word-break:keep-all !important;
-  }
-
-  .kpi div{
-    display:flex !important;
-    justify-content:space-between !important;
-    align-items:center !important;
-    gap:10px !important;
-  }
-
-  .kpi div span{
-    flex:1;
-    font-size:16px;
-    line-height:1.6;
-  }
-
-  .kpi strong{
-    flex-shrink:0;
-    white-space:nowrap !important;
-    font-size:22px !important;
-  }
+/* FAQ */
+.faq-list{
+  max-width:900px;
+  margin:0 auto;
 }
-  @media(max-width:768px){
-
-  .kpi div{
-    display:block !important;
-    padding:22px 18px !important;
-    line-height:1.6 !important;
-  }
-
-  .kpi div span{
-    display:block !important;
-    font-size:18px !important;
-    line-height:1.55 !important;
-    margin-bottom:8px !important;
-  }
-
- .kpi strong{
-  display:block !important;
-  width:100%;
-  text-align:center !important;
-  font-size:34px !important;
-  line-height:1.1 !important;
-  white-space:nowrap !important;
-  margin-top:12px !important;
-  color:#ff0000;
+.faq-item{
+  background:#fff;
+  border-radius:16px;
+  margin-bottom:16px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
 }
-}
-  /* スマホ表示修正 */
-@media (max-width:768px){
-
-  @media(max-width:768px){
-
-  .authority-box{
-    padding:28px 22px !important;
-    overflow:visible !important;
-  }
-
-  .authority-box h3{
-    font-size:28px !important;
-    line-height:1.5 !important;
-    white-space:normal !important;
-    word-break:keep-all !important;
-    overflow-wrap:break-word !important;
-  }
-
-}
-  @media(max-width:768px){
-
-  .authority-title{
-    font-size:30px !important;
-    line-height:1.45 !important;
-    white-space:normal !important;
-    word-break:keep-all !important;
-    overflow-wrap:normal !important;
-  }
-
-  .sp-br{
-    display:block;
-  }
-}
-  .authority-title{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
-}
-  @media (max-width:768px){
-
-  .pricing-card h3,
-  .plan-card h3{
-      font-size: 2rem !important;
-      line-height: 1.4 !important;
-      word-break: keep-all !important;
-  }
-
-}
-  .privacy-check{
-  margin:20px 0;
-  text-align:left;
-}
-
-.privacy-check label{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:14px;
-  color:#555;
-  line-height:1.5;
-}
-
-.privacy-check input[type="checkbox"]{
-  width:18px;
-  height:18px;
+.faq-item summary{
   cursor:pointer;
+  padding:22px 26px;
+  font-size:18px;
+  font-weight:700;
+  list-style:none;
+}
+.faq-item p,
+.faq-item ul{
+  padding:0 26px 24px;
+  margin:0;
+  color:#555;
+}
+.faq-item ul{padding-left:46px}
+.faq-item[open] summary{color:#f58220}
+
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,var(--orange),#ffb347);
+  color:#fff;
+  text-align:center;
+  padding:90px 0;
+}
+.contact .section-title span,
+.contact .section-title h2,
+.contact .section-title p{
+  color:#fff;
+}
+.contact-cta{
+  text-align:center;
+  margin-top:40px;
+}
+.contact-cta .cta-btn{
+  background:#fff;
+  color:#ff6b00;
 }
 
-.privacy-check a{
-  color:#ff7a00;
-  text-decoration:none;
-  font-weight:600;
+/* COMPANY */
+.company{
+  padding:80px 0;
+  background:#fff;
+}
+.company-box{
+  max-width:900px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.05);
+  overflow:hidden;
+}
+.company-box dl{margin:0}
+.company-box div{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  border-bottom:1px solid #eee;
+}
+.company-box div:last-child{border-bottom:none}
+.company-box dt{
+  background:#fff7ef;
+  padding:20px 24px;
+  font-weight:800;
+  color:#4b2512;
+}
+.company-box dd{
+  margin:0;
+  padding:20px 24px;
+  color:#333;
+}
+.company-box a{
+  color:#f58220;
+  font-weight:700;
 }
 
-.privacy-check a:hover{
-  text-decoration:underline;
-}
-  .footer-links{
-  margin-bottom:12px;
-}
-
-.footer-links a{
-  color:#666;
-  text-decoration:none;
-  font-size:14px;
-}
-
-.footer-links a:hover{
-  text-decoration:underline;
-}
-  footer{
+/* FOOTER */
+footer{
   text-align:center;
   padding:30px 20px;
   background:#f8f8f8;
 }
-
 footer p{
   margin:0;
   font-size:14px;
   color:#888;
 }
-
 footer a{
   color:#666;
-  text-decoration:none;
 }
-
 footer a:hover{
   color:#ff7a00;
+}
+
+/* SMARTPHONE */
+@media(max-width:900px){
+  .nav{display:none}
+  .fv-inner,
+  .authority,
+  .results{
+    grid-template-columns:1fr;
+  }
+  .problem-grid,
+  .solution-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+  body{
+    overflow-x:hidden;
+    font-size:16px;
+  }
+  .container{
+    width:100%;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .header{
+    position:relative;
+  }
+  .header-inner{
+    height:82px;
+    justify-content:center;
+  }
+  .logo img{
+    width:180px;
+  }
+  .fv-inner{
+    display:block;
+    min-height:auto;
+  }
+  .fv-copy{
+    padding:42px 22px 30px;
+  }
+  .fv-badge{
+    width:100%;
+    font-size:18px;
+    line-height:1.5;
+    text-align:center;
+    white-space:normal;
+  }
+  .fv h1{
+    font-size:38px;
+    line-height:1.32;
+    letter-spacing:0;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+  .fv-copy > p{
+    font-size:18px;
+    line-height:2;
+    word-break:keep-all;
+  }
+  .fv-cards{
+    grid-template-columns:1fr;
+  }
+  .fv-photo{
+    height:430px;
+  }
+  .fv-photo img{
+    object-position:center top;
+  }
+  .fv-seal{
+    width:132px;
+    height:132px;
+    right:20px;
+    bottom:22px;
+  }
+  .fv-seal p{font-size:16px}
+  .fv-seal strong{font-size:40px}
+  .fv-bottom{
+    padding:28px 22px;
+  }
+  .fv-bottom-inner{
+    flex-direction:column;
+    gap:14px;
+    text-align:center;
+  }
+  .fv-bottom strong{font-size:28px}
+  .fv-bottom span{font-size:16px}
+  .fv-bottom a{
+    width:100%;
+    min-width:0;
+    font-size:18px;
+    padding:18px 16px;
+  }
+  .section,
+  .pricing,
+  .contact,
+  .company{
+    padding:64px 0;
+  }
+  .section-title h2{
+    font-size:30px;
+    line-height:1.45;
+    word-break:keep-all;
+  }
+  .section-title p{
+    font-size:15px;
+    line-height:1.8;
+  }
+  .problem-card{
+    font-size:18px;
+    line-height:1.6;
+    padding:26px 24px;
+  }
+  .authority-box{
+    padding:28px 22px;
+  }
+  .authority-title{
+    font-size:30px;
+    line-height:1.45;
+  }
+  .inquiry-only,
+  .voice{
+    padding:30px 22px;
+  }
+  .plan-title{
+    font-size:30px;
+  }
+  .price-message{
+    font-size:18px;
+  }
+  .faq-item summary{
+    font-size:17px;
+    line-height:1.6;
+  }
+  .company-box div{
+    display:block;
+  }
+  .company-box dt{
+    padding:16px 20px 6px;
+  }
+  .company-box dd{
+    padding:6px 20px 18px;
+    word-break:break-word;
+  }
 }
 </style>
 </head>
@@ -1706,22 +714,22 @@ footer a:hover{
 
 <header class="header">
   <div class="container header-inner">
-   <a href="#" class="logo">
-  <img src="images/goo-dy.logo_.png" alt="goo-dy.">
-</a>
+    <a href="https://goo-dy.com/" class="logo">
+      <img src="images/goo-dy.logo_.png" alt="goo-dy.">
+    </a>
+
     <nav class="nav">
       <a href="#problem">お悩み</a>
       <a href="#solution">選ばれる理由</a>
       <a href="#results">実績</a>
       <a href="#price">料金</a>
       <a href="#faq">よくあるご質問</a>
-       <a href="#company">会社概要</a>
-      <a href="https://goo-dy.com/contact-beauty/"</a>
+      <a href="#company">会社概要</a>
+      <a href="https://goo-dy.com/contact-beauty/" class="nav-cta">無料相談</a>
     </nav>
   </div>
 </header>
 
-```html
 <section class="fv">
   <div class="fv-bg"></div>
 
@@ -1778,15 +786,16 @@ footer a:hover{
     <div class="fv-bottom-inner">
       <strong>無料相談受付中！</strong>
       <span>＼ まずはお気軽にご相談ください ／</span>
-      <a href="https://goo-dy.com/contact-beauty/"</a>
+      <a href="https://goo-dy.com/contact-beauty/">無料で相談する ›</a>
     </div>
   </div>
 </section>
+
 <section class="section section-gray" id="problem">
   <div class="container">
     <div class="section-title">
       <span>PROBLEM</span>
-      <h2 class="sp-nowrap-title">こんなお悩みありませんか？</h2>
+      <h2>こんなお悩みありませんか？</h2>
       <p>美容サロンオーナーが抱えやすい集客課題をまとめました。</p>
     </div>
 
@@ -1812,26 +821,17 @@ footer a:hover{
     <div class="solution-grid">
       <div class="solution-card">
         <h3>専門家による提案</h3>
-        <p>
-          美容サロン集客・HPB運用・Webマーケティングの視点から、
-          店舗の特徴を活かした改善提案を行います。
-        </p>
+        <p>美容サロン集客・HPB運用・Webマーケティングの視点から、店舗の特徴を活かした改善提案を行います。</p>
       </div>
 
       <div class="solution-card">
         <h3>定期的なアフターフォロー</h3>
-        <p>
-          売上・閲覧数・集客数を見ながら、次に何を改善すべきかを
-          数字ベースでサポートします。
-        </p>
+        <p>売上・閲覧数・集客数を見ながら、次に何を改善すべきかを数字ベースでサポートします。</p>
       </div>
 
       <div class="solution-card">
         <h3>運用代行にも対応</h3>
-        <p>
-          SNSやホットペッパー、Googleビジネスプロフィールなど、
-          面倒なネット操作も代行可能です。
-        </p>
+        <p>SNSやホットペッパー、Googleビジネスプロフィールなど、面倒なネット操作も代行可能です。</p>
       </div>
     </div>
   </div>
@@ -1847,14 +847,11 @@ footer a:hover{
 
     <div class="authority">
       <div class="authority-box">
-       <h3 class="authority-title">
-  <span>日本を代表する</span>
-  <span>経営者が支援</span>
-</h3>
-        <p>
-          HIS創業者、ユナイテッドアローズ創業者など、
-          日本を代表する経営者が後ろ盾として支援。
-        </p>
+        <h3 class="authority-title">
+          <span>日本を代表する</span>
+          <span>経営者が支援</span>
+        </h3>
+        <p>HIS創業者、ユナイテッドアローズ創業者など、日本を代表する経営者が後ろ盾として支援。</p>
       </div>
 
       <div class="authority-box">
@@ -1885,19 +882,19 @@ footer a:hover{
       <div class="result-card">
         <h3>エステサロン</h3>
         <div class="kpi">
-         <div><span>閲覧数：500PV → 800〜1,000PV</span><strong>約2倍</strong></div>
-　　　　  <div><span>CVR：35% → 50%超</span><strong>約1.5倍</strong></div>
-　　　　  <div><span>新規集客：5人/月 → 10人/月</span><strong>約2倍</strong></div>
+          <div><span>閲覧数：500PV → 800〜1,000PV</span><strong>約2倍</strong></div>
+          <div><span>CVR：35% → 50%超</span><strong>約1.5倍</strong></div>
+          <div><span>新規集客：5人/月 → 10人/月</span><strong>約2倍</strong></div>
         </div>
       </div>
 
       <div class="result-card">
         <h3>カイロプラクティック</h3>
         <div class="kpi">
-  <div><span>閲覧数：400PV → 800PV</span><strong>約2倍</strong></div>
-  <div><span>CVR：30% → 45%</span><strong>約1.5倍</strong></div>
-  <div><span>新規集客：3人/月 → 10人/月</span><strong>約3.3倍</strong></div>
-</div>
+          <div><span>閲覧数：400PV → 800PV</span><strong>約2倍</strong></div>
+          <div><span>CVR：30% → 45%</span><strong>約1.5倍</strong></div>
+          <div><span>新規集客：3人/月 → 10人/月</span><strong>約3.3倍</strong></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1907,21 +904,14 @@ footer a:hover{
   <div class="container">
     <div class="voice">
       <h3>お客様の声</h3>
-      <p>
-        エステサロン <strong>TIARA 葛西店様</strong>
-      </p>
-      <p>
-        集客にお困りの状態でご相談いただき、
-        サービス導入後わずか1ヶ月で、
-        <strong>過去最高の新規顧客獲得数</strong>へ。
-      </p>
+      <p>エステサロン <strong>TIARA 葛西店様</strong></p>
+      <p>集客にお困りの状態でご相談いただき、サービス導入後わずか1ヶ月で、<strong>過去最高の新規顧客獲得数</strong>へ。</p>
     </div>
   </div>
 </section>
 
 <section class="pricing" id="price">
   <div class="container">
-
     <div class="section-title">
       <span>PRICE</span>
       <h2>料金について</h2>
@@ -1929,19 +919,15 @@ footer a:hover{
     </div>
 
     <div class="price-card inquiry-only">
-
-      <div class="price-badge">
-        業界最安値
-      </div>
+      <div class="price-badge">業界最安値</div>
 
       <h3 class="plan-title">
-  完全オーダーメイド<br>
-  プラン
-</h3>
+        完全オーダーメイド<br>
+        プラン
+      </h3>
 
       <p class="price-message">
-        ご契約内容や支援範囲によって料金が異なるため、
-        詳細はお問い合わせください。
+        ご契約内容や支援範囲によって料金が異なるため、詳細はお問い合わせください。
       </p>
 
       <ul>
@@ -1953,12 +939,13 @@ footer a:hover{
         <li>✓ 売上改善コンサルティング</li>
       </ul>
 
-      <a href="https://goo-dy.com/contact-beauty/"</p>
-
+      <a href="https://goo-dy.com/contact-beauty/" class="btn-primary">
+        無料相談はこちら
+      </a>
     </div>
-
   </div>
 </section>
+
 <section class="section section-gray" id="faq">
   <div class="container">
     <div class="section-title">
@@ -1968,37 +955,22 @@ footer a:hover{
     </div>
 
     <div class="faq-list">
-
       <details class="faq-item">
         <summary>Q. 心配だけど大丈夫なの？</summary>
-        <p>
-          A. ハイ！おかげ様で、これまで「継続率100%」となっております。
-        </p>
+        <p>A. ハイ！おかげ様で、これまで「継続率100%」となっております。</p>
       </details>
 
       <details class="faq-item">
         <summary>Q. 価格はいくらなの？</summary>
-        <p>
-          A. ご安心してください！
-          「頑張っている人を応援したい！」という想いでスタートしたサービスなので、
-          価格はできる限りリーズナブルに抑え、「業界最安値」で対応しています。
-          実際に大手競合会社様からも
-          「この値段でこのサービスを出されたら敵わない」
-          とのお言葉をいただいております。
-        </p>
+        <p>A. ご安心してください！「頑張っている人を応援したい！」という想いでスタートしたサービスなので、価格はできる限りリーズナブルに抑え、「業界最安値」で対応しています。</p>
       </details>
 
       <details class="faq-item">
         <summary>Q. 他社と何が違うの？</summary>
-        <p>
-          A. 株主には日本を代表する経営者が複数おり、
-          私たちは大切な信用を預かっています。
-          そのため絶対的な信用と安心があります。
-        </p>
-
+        <p>A. 株主には日本を代表する経営者が複数おり、私たちは大切な信用を預かっています。そのため絶対的な信用と安心があります。</p>
         <ul>
           <li>① しつこい営業・押し売り・勧誘は一切行いません。</li>
-          <li>② 集客コンサルタントは全員が実績・経験豊富（400店舗以上支援実績含む）で、代表自ら面談して採用しています。</li>
+          <li>② 集客コンサルタントは全員が実績・経験豊富で、代表自ら面談して採用しています。</li>
           <li>③ 「三度の飯よりWebが好き」という最強のマーケターも担当します。</li>
           <li>④ メイン担当・サブ担当のダブル体制でサポートします。</li>
         </ul>
@@ -2006,60 +978,43 @@ footer a:hover{
 
       <details class="faq-item">
         <summary>Q. 契約期間はどれくらいなの？</summary>
-        <p>
-          A. サービス内容をきちんとご説明させていただいた上で、
-          12ヵ月更新としております。
-        </p>
+        <p>A. サービス内容をきちんとご説明させていただいた上で、12ヵ月更新としております。</p>
       </details>
 
       <details class="faq-item">
         <summary>Q. どんなお店でもちゃんと集客できるの？</summary>
-        <p>
-          A. ホットペッパービューティーに掲載しているお店であれば、
-          基本的に対応可能です。
-          また、単なる運用代行ではなく、お客様に寄り添ったサポートを提供いたします。
-        </p>
+        <p>A. ホットペッパービューティーに掲載しているお店であれば、基本的に対応可能です。</p>
       </details>
 
       <details class="faq-item">
         <summary>Q. どのくらいで効果が出るの？</summary>
-        <p>
-          A. 導入1ヶ月で新規来客数が過去最高、2ヶ月目でリピート率が過去最高となったサロンの実績がございます。成果は店舗の状況により異なりますが、しっかりと伴走してまいります。
-        </p>
+        <p>A. 導入1ヶ月で新規来客数が過去最高、2ヶ月目でリピート率が過去最高となったサロンの実績がございます。</p>
       </details>
-       <details class="faq-item">
+
+      <details class="faq-item">
         <summary>Q. 月々何をやってもらえるの？</summary>
-        <p>
-          A. アドバイスだけのコンサルティングではなく、HPB・MEOの運用代行として実際に手を動かします。
-          月次レポートと定例MTGでPDCAを回しながら、成果につながるよう伴走します。
-        </p>
+        <p>A. アドバイスだけではなく、HPB・MEOの運用代行として実際に手を動かします。</p>
       </details>
- <details class="faq-item">
+
+      <details class="faq-item">
         <summary>Q. MEO（Googleマップ）にも対応してるの？</summary>
-        <p>
-          A. はい。HPBとMEOはセットで対応しています。
-        </p>
+        <p>A. はい。HPBとMEOはセットで対応しています。</p>
       </details>
- <details class="faq-item">
+
+      <details class="faq-item">
         <summary>Q. まず相談だけでもできる？</summary>
-        <p>
-          A. もちろんです。まずはお気軽に無料相談をご活用ください。
-        </p>
+        <p>A. もちろんです。まずはお気軽に無料相談をご活用ください。</p>
       </details>
-
-
     </div>
   </div>
 </section>
+
 <section id="contact" class="contact">
   <div class="container">
-
     <div class="section-title">
       <span>CONTACT</span>
       <h2>無料相談</h2>
-      <p>
-        集客・HPB・SNS運用のお悩みをお気軽にご相談ください。
-      </p>
+      <p>集客・HPB・SNS運用のお悩みをお気軽にご相談ください。</p>
     </div>
 
     <div class="contact-cta">
@@ -2067,13 +1022,9 @@ footer a:hover{
         無料相談はこちら
       </a>
     </div>
+  </div>
+</section>
 
-  </div>
-</section>
-      <button class="btn btn-primary" type="submit">無料相談を送信する</button>
-    </form>
-  </div>
-</section>
 <section class="company" id="company">
   <div class="container">
     <div class="section-title">
@@ -2087,32 +1038,26 @@ footer a:hover{
           <dt>会社名</dt>
           <dd>株式会社goo-dy.（グッディ）</dd>
         </div>
-
         <div>
           <dt>代表取締役</dt>
           <dd>新井 暁（AKIRA ARAI）</dd>
         </div>
-
         <div>
           <dt>所在地</dt>
           <dd>〒150-0001<br>東京都渋谷区神宮前6-23-4</dd>
         </div>
-
         <div>
           <dt>TEL</dt>
           <dd><a href="tel:05012021281">050-1202-1281</a></dd>
         </div>
-
         <div>
           <dt>MAIL</dt>
           <dd><a href="mailto:kachidoki101303@circus.ocn.ne.jp">kachidoki101303@circus.ocn.ne.jp</a></dd>
         </div>
-
         <div>
           <dt>公式サイト</dt>
           <dd><a href="https://goo-dy.com/" target="_blank" rel="noopener">https://goo-dy.com/</a></dd>
         </div>
-
         <div>
           <dt>いいモノ.com</dt>
           <dd><a href="https://ii-mo-no.com/" target="_blank" rel="noopener">https://ii-mo-no.com/</a></dd>
@@ -2121,10 +1066,11 @@ footer a:hover{
     </div>
   </div>
 </section>
+
 <footer>
   <p>
     © 2026 株式会社goo-dy |
-    <a href="https://goo-dy.com/privacy-policy/" target="_blank">
+    <a href="https://goo-dy.com/privacy-policy/" target="_blank" rel="noopener">
       プライバシーポリシー
     </a>
   </p>
