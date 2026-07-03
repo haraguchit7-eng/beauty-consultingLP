@@ -179,29 +179,75 @@ img{max-width:100%;display:block}
   background:linear-gradient(90deg,rgba(255,248,238,.95) 0%,rgba(255,248,238,.45) 25%,rgba(255,255,255,0) 55%);
   z-index:2;
 }
+.fv-photo{
+  position:relative;
+  width:100%;
+  height:720px;
+  z-index:2;
+  overflow:hidden;
+}
+
 .fv-seal{
   position:absolute;
-  z-index:3;
-  right:7%;
-  bottom:70px;
-  width:190px;
-  height:190px;
+  right:34px;
+  bottom:42px;
+  z-index:10;
+
+  width:178px;
+  height:178px;
   border-radius:50%;
-  background:#fff;
-  border:5px solid #f4c476;
-  box-shadow:0 16px 38px rgba(0,0,0,.18);
+
+  background:
+    radial-gradient(circle at 50% 42%, #ffffff 0%, #ffffff 58%, #fff7e8 100%);
+  border:6px solid #f4bd62;
+  box-shadow:
+    0 18px 42px rgba(80,40,0,.24),
+    inset 0 0 0 5px rgba(255,255,255,.8);
+
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  color:#43210f;
+
+  color:#3b2414;
+  transform:none;
 }
-.fv-seal .crown{color:#d8a43b;font-size:32px}
-.fv-seal p{margin:4px 0 0;font-size:22px;font-weight:900}
-.fv-seal strong{color:#f15a00;font-size:58px;line-height:1}
-.fv-seal strong span{font-size:26px}
-.fv-seal small{font-size:18px;font-weight:900}
+
+.fv-seal .crown{
+  color:#c68a16;
+  font-size:26px;
+  line-height:1;
+  margin-bottom:4px;
+}
+
+.fv-seal p{
+  margin:0;
+  font-size:20px;
+  line-height:1.2;
+  font-weight:900;
+}
+
+.fv-seal strong{
+  display:block;
+  margin:3px 0 2px;
+  color:#f15a00;
+  font-size:52px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-.04em;
+}
+
+.fv-seal strong span{
+  font-size:24px;
+  margin-left:2px;
+}
+
+.fv-seal small{
+  font-size:16px;
+  line-height:1.2;
+  font-weight:900;
+}
 .fv-bottom{
   position:relative;
   z-index:3;
@@ -631,14 +677,34 @@ footer a:hover{
   .fv-photo img{
     object-position:center top;
   }
-  .fv-seal{
-    width:132px;
-    height:132px;
-    right:20px;
-    bottom:22px;
-  }
-  .fv-seal p{font-size:16px}
-  .fv-seal strong{font-size:40px}
+  ..fv-seal{
+  width:124px;
+  height:124px;
+  right:14px;
+  bottom:18px;
+  border-width:4px;
+}
+
+.fv-seal .crown{
+  font-size:18px;
+  margin-bottom:2px;
+}
+
+.fv-seal p{
+  font-size:14px;
+}
+
+.fv-seal strong{
+  font-size:36px;
+}
+
+.fv-seal strong span{
+  font-size:17px;
+}
+
+.fv-seal small{
+  font-size:12px;
+}
   .fv-bottom{
     padding:28px 22px;
   }
