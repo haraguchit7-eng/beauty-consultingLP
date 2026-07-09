@@ -885,6 +885,51 @@ footer a:hover{
     opacity:.9;
 
 }
+  /* ===== MOBILE HERO TEXT FIX ===== */
+@media(max-width:768px){
+
+  .fv{
+    overflow:hidden;
+  }
+
+  .fv-copy{
+    width:100%;
+    max-width:100%;
+    padding:42px 20px 34px;
+    overflow:visible;
+  }
+
+  .fv-copy > p{
+    max-width:100%;
+    font-size:17px;
+    line-height:2;
+    letter-spacing:-0.02em;
+    word-break:normal;
+    overflow-wrap:break-word;
+    white-space:normal;
+  }
+
+  .fv-copy > p br{
+    display:none;
+  }
+
+  .fv h1{
+    max-width:100%;
+    font-size:clamp(38px,10.5vw,48px);
+    line-height:1.35;
+    letter-spacing:-0.04em;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+  }
+
+  .fv-badge{
+    max-width:100%;
+    padding:14px 18px;
+    font-size:17px;
+    white-space:nowrap;
+  }
+
+}
 </style>
 </head>
 
