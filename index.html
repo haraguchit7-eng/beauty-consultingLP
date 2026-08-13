@@ -433,18 +433,26 @@ img{max-width:100%;display:block}
   color:#ff0000;
 }
 
-/* VOICE */
-.voice{
-  background:#fff;
-  border-radius:24px;
-  padding:42px;
-  box-shadow:0 16px 40px rgba(0,0,0,.06);
-}
-.voice h3{
-  color:var(--navy);
-  font-size:28px;
-}
-.voice strong{color:var(--orange)}
+/* CUSTOMER STORIES */
+.customer-stories{position:relative;overflow:hidden}
+.customer-stories:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(255,107,0,.07);right:-130px;top:-120px;pointer-events:none}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+.story-card{background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 18px 45px rgba(10,32,62,.09);border:1px solid rgba(10,32,62,.06);transition:.25s ease}
+.story-card:hover{transform:translateY(-5px);box-shadow:0 24px 55px rgba(10,32,62,.14)}
+.story-photo{height:235px;overflow:hidden;background:#eee}
+.story-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s ease}
+.story-card:hover .story-photo img{transform:scale(1.035)}
+.story-body{padding:26px 26px 30px}
+.story-tag{display:inline-flex;align-items:center;gap:7px;color:var(--orange);font-size:12px;font-weight:900;letter-spacing:.08em;margin-bottom:12px}
+.story-tag:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.story-body h3{font-size:20px;line-height:1.55;color:var(--navy);margin:0 0 8px}
+.story-company{font-size:13px;color:#6d7580;margin:0 0 18px}
+.story-result{font-size:22px;line-height:1.5;font-weight:900;color:var(--navy);margin:0 0 14px}
+.story-result strong{color:var(--orange)}
+.story-comment{font-size:14px;line-height:1.9;color:#555;margin:0}
+.story-card.featured{border:2px solid rgba(255,107,0,.45);position:relative}
+.story-card.featured:after{content:"導入1ヶ月";position:absolute;right:16px;top:16px;background:var(--orange);color:#fff;font-size:12px;font-weight:900;padding:8px 13px;border-radius:999px;box-shadow:0 8px 20px rgba(255,107,0,.25)}
+@media(max-width:820px){.story-grid{grid-template-columns:1fr}.story-photo{height:240px}.story-card{max-width:560px;margin:0 auto;width:100%}}
 
 /* PRICE */
 .pricing{
@@ -1123,12 +1131,47 @@ footer a:hover{
   </div>
 </section>
 
-<section class="section section-gray">
+<section class="section section-gray customer-stories" id="voices">
   <div class="container">
-    <div class="voice">
-      <h3>お客様の声</h3>
-      <p>エステサロン <strong>TIARA 葛西店様</strong></p>
-      <p>集客にお困りの状態でご相談いただき、サービス導入後わずか1ヶ月で、<strong>過去最高の新規顧客獲得数</strong>へ。</p>
+    <div class="section-title">
+      <span>CUSTOMER STORIES</span>
+      <h2>お客様の声・導入事例</h2>
+      <p>集客の悩みと向き合い、店舗ごとに最適な施策を積み重ねています。</p>
+    </div>
+
+    <div class="story-grid">
+      <article class="story-card featured">
+        <div class="story-photo"><img src="images/voice-tiara.jpg" alt="TIARA（ティアラ）葛西店様" loading="lazy"></div>
+        <div class="story-body">
+          <div class="story-tag">ESTHETIC SALON</div>
+          <h3>TIARA（ティアラ）葛西店様</h3>
+          <p class="story-company">エステサロン</p>
+          <p class="story-result">サービス導入後、<strong>過去最高の新規顧客獲得数へ</strong></p>
+          <p class="story-comment">集客にお困りの状態でご相談いただき、導入後わずか1ヶ月で成果につながりました。</p>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="story-photo"><img src="images/voice-nc.jpg" alt="NC鍼灸接骨院 前橋・NC bodymake salon 株式会社NC様" loading="lazy"></div>
+        <div class="story-body">
+          <div class="story-tag">BODY CARE</div>
+          <h3>NC鍼灸接骨院 前橋 / NC bodymake salon</h3>
+          <p class="story-company">株式会社NC様</p>
+          <p class="story-result"><strong>新規のお客様が増加</strong>し、地図検索の順位も改善</p>
+          <p class="story-comment">店舗の認知・検索導線を整えながら、新規集客につながる施策を継続しています。</p>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="story-photo"><img src="images/voice-ugi.jpg" alt="小顔矯正専門店 シンメトリー銀座店 株式会社UGI様" loading="lazy"></div>
+        <div class="story-body">
+          <div class="story-tag">FACE SALON</div>
+          <h3>小顔矯正専門店 シンメトリー銀座店</h3>
+          <p class="story-company">株式会社UGI様</p>
+          <p class="story-result">さらなる<strong>集客アップ</strong>に向けて継続支援中</p>
+          <p class="story-comment">銀座で店舗を展開するUGI様にご利用いただき、さらなる集客アップに向けた施策を進めています。</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
