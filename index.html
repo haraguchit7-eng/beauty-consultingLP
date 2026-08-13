@@ -447,11 +447,16 @@ img{max-width:100%;display:block}
 .story-tag:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
 .story-body h3{font-size:20px;line-height:1.55;color:var(--navy);margin:0 0 8px}
 .story-company{font-size:13px;color:#6d7580;margin:0 0 18px}
+.story-metrics{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.story-metrics span{display:inline-flex;align-items:center;min-height:30px;padding:6px 11px;border-radius:999px;background:#fff5ec;border:1px solid rgba(255,107,0,.22);color:var(--orange);font-size:12px;font-weight:900;letter-spacing:.02em}
+.story-featured .story-metrics span{background:#fff7ef}
+.story-featured .story-result{position:relative}
+.story-featured .story-result:after{content:"";display:block;width:44px;height:3px;border-radius:999px;background:var(--orange);margin-top:14px}
 .story-result{font-size:22px;line-height:1.5;font-weight:900;color:var(--navy);margin:0 0 14px}
 .story-result strong{color:var(--orange)}
 .story-comment{font-size:14px;line-height:1.9;color:#555;margin:0}
-.story-card.featured{border:2px solid rgba(255,107,0,.45);position:relative}
-.story-card.featured:after{content:"導入1ヶ月";position:absolute;right:16px;top:16px;background:var(--orange);color:#fff;font-size:12px;font-weight:900;padding:8px 13px;border-radius:999px;box-shadow:0 8px 20px rgba(255,107,0,.25)}
+.story-card.story-featured{border:2px solid rgba(255,107,0,.45);position:relative}
+.story-card.story-featured:after{content:"導入1ヶ月";position:absolute;right:16px;top:16px;background:var(--orange);color:#fff;font-size:12px;font-weight:900;padding:8px 13px;border-radius:999px;box-shadow:0 8px 20px rgba(255,107,0,.25)}
 @media(max-width:820px){.story-grid{grid-template-columns:1fr}.story-photo{height:240px}.story-card{max-width:560px;margin:0 auto;width:100%}}
 
 /* PRICE */
@@ -1140,12 +1145,13 @@ footer a:hover{
     </div>
 
     <div class="story-grid">
-      <article class="story-card featured">
+      <article class="story-card story-featured">
         <div class="story-photo"><img src="images/voice-tiara.jpg" alt="TIARA（ティアラ）葛西店様" loading="lazy"></div>
         <div class="story-body">
           <div class="story-tag">ESTHETIC SALON</div>
           <h3>TIARA（ティアラ）葛西店様</h3>
           <p class="story-company">エステサロン</p>
+          <div class="story-metrics"><span>導入1ヶ月</span><span>過去最高</span></div>
           <p class="story-result">サービス導入後、<strong>過去最高の新規顧客獲得数へ</strong></p>
           <p class="story-comment">集客にお困りの状態でご相談いただき、導入後わずか1ヶ月で成果につながりました。</p>
         </div>
@@ -1157,6 +1163,7 @@ footer a:hover{
           <div class="story-tag">BODY CARE</div>
           <h3>NC鍼灸接骨院 前橋 / NC bodymake salon</h3>
           <p class="story-company">株式会社NC様</p>
+          <div class="story-metrics"><span>新規顧客 増加</span><span>地図検索 改善</span></div>
           <p class="story-result"><strong>新規のお客様が増加</strong>し、地図検索の順位も改善</p>
           <p class="story-comment">店舗の認知・検索導線を整えながら、新規集客につながる施策を継続しています。</p>
         </div>
